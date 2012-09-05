@@ -22,6 +22,7 @@ Questions? Please e-mail api@4chan.org.
 ### Rules ###
 
 * Do not make more than one request per second.
+* Use If-Modified-Since when doing your requests.
 * More to come later...
 
 ### Post Object ####
