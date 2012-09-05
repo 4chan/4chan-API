@@ -17,8 +17,6 @@ I will update this guide to suck less at a later point in time. If you'd like to
 
 Questions? Please e-mail api@4chan.org.
 
-**Note: As of now, image attributes print on every post. This will be changed in the next 24-48 hours and they will become optional and only displayed when an image is attached.**
-
 ### Rules ###
 
 * Do not make more than one request per second.
