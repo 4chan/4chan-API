@@ -17,111 +17,60 @@ I will update this guide to suck less at a later point in time. If you'd like to
 
 Questions? Please e-mail api@4chan.org.
 
-### Post Object ###
+**Note: As of now, image attributes print on every post. This will be changed in the next 24-48 hours and they will become optional and only displayed when an image is attached.**
 
-**no : integer**  
-Post number.  
-Possible values: 1-9999999999999
+### Rules ###
 
-**resto : integer**  
-Reply to thread?  
-Possible values: 0 (not a reply, is OP), 1-99999999999999
+* Do not make more than one request per second.
+* More to come later...
 
-**sticky : integer**  
-Is a sticky?  
-Possible values: 0 (no), 1 (yes)
+### Post Object ####
 
-**closed : integer**  
-Is closed?  
-Possible values: 0 (no), 1 (yes)
+| **attribute**   | **value**      | **description**      | **possible values**                        | **example value**     |
+|:----------------|:---------------|:---------------------|:-------------------------------------------|:----------------------|
+| `no`            | `integer`      | Post number          | 1-9999999999999                            | `9001`                |
+| `resto`         | `integer`      | Reply to             | 0 (is thread), 1-9999999999999             | `0`                   |
+| `sticky`        | `integer`      | Stickied thread?     | 0 (no), 1 (yes)                            | `1`                   |
+| `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `0`                   |
+| `now`           | `string`       | Date and time        | MM\/DD\/YY(Day)HH:MM (:SS on some boards)  | `08\/08\/12(Wed)01:11`|
+| `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          |
+| `name`          | `string`       | Name                 | text *or empty*                            | `moot`                |
+| `trip`          | `string`       | Tripcode             | text (format: !tripcode!!securetripcode)   | `!Ep8pui8Vw2`         |
+| `id`            | `string`       | ID                   | text (8 characters), Mod, Admin            | `Admin`               |
+| `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, developer | `admin`             |
+| `country`       | `string`       | Country              | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
+| `email`         | `string`       | Email                | text *or empty*                            | `moot@4chan.org`      |
+| `sub`           | `string`       | Subject              | text *or empty*                            | `This is a subject`   |
+| `com`           | `string`       | Comment              | text *or empty*                            | `This is a comment`   |
+| `tim`           | `integer`      | Renamed filename     | UNIX timestamp + microseconds              | `1344402680740`       |
+| `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
+| `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf               | `.jpg`                |
+| `fsize`         | `integer`      | File size            | 1-8388608                                  | `2500`                |
+| `md5`           | `string`       | File MD5             | text (32 character/16 byte MD5 hash        | `554583e1a577d1b32537c87f72557574` |
+| `w`             | `integer`      | Image width          | 1-10000                                    | `500`                 |
+| `h`             | `integer`      | Image height         | 1-10000                                    | `500`                 |
+| `tn_w`          | `integer`      | Thumbnail width      | 1-250                                      | `250`                 |
+| `tn_h`          | `integer`      | Thumbnail height     | 1-250                                      | `250`                 |
+| `filedeleted`   | `integer`      | File deleted?        | 0 (no), 1 (yes)                            | `0`                   |
+| `spoiler`       | `integer`      | Spoiler image?       | 0 (no), 1 (yes)                            | `0`                   |
 
-**now : string**  
-Date and time of post.  
-Possible values: string (date and time in the following format: MM\/DD\/YY(Day)HH:MM:SS)
-
-**time : integer**  
-Date and time of post in UNIX format.  
-Possible values: integer (UNIX time)
-
-**name : string**  
-Name of poster.  
-Possible values: string
-
-**trip : string** *or empty*  
-Tripcode of poster.  
-Possible values: string (format: !tripcode!!securetripcode)
-
-**id : string**  
-ID of poster.  
-Possible values: string (8 characters)
-
-**capcode : string**  
-Capcode of poster.  
-Possible values: string (none, mod, admin, admin_highlight, developer)
-
-**country : string**  
-Two-letter country code in ISO 3166-1 alpha-2 format.  
-Possible values: string (XX for unknown country, otherwise ISO 3166-1 alpha-2 country codes)
-
-**email : string** *or empty*  
-E-mail address.  
-Possible values: *empty* (no email), string
-
-**sub : string** *or empty*  
-Subject of post.  
-Possible values: *empty* (no subject), string
-
-**com : string** *or empty*  
-Post comment.  
-Possible values: *empty* (no comment), string (escaped and includes HTML formatting)
-
-**tim : integer**  
-Image renamed file name.  
-Possible values: integer (UNIX time + microseconds)
-
-**filename : string** *or empty*  
-Image original file name.  
-Possible values: *empty* (no image), string
-
-**ext : string** *or empty*  
-Image file extension.  
-Possible values: *empty* (no image), string (.jpg, .png, .gif, .svg)
-
-**fsize : integer**  
-Image file size in bytes.  
-Possible values: 0 (no image), 1-8388608
-
-**md5 : string**  
-Image MD5.  
-Possible values: *empty* (no image), string (32 character/16 byte MD5 hash)
-
-**w : integer**  
-Image width.  
-Possible values: 0 (no image), 1-10000
-
-**h : integer**  
-Image height.  
-Possible values: 0 (no image), 1-10000
-
-**tn\_w : integer**  
-Thumbnail width.  
-Possible values: 0 (no thumbnail), 1-250
-
-
-**tn\_h : integer**  
-Thumbnail height.  
-Possible values: 0 (no thumbnail), 1-250
-
-**filedeleted : integer**  
-Has the file been deleted?  
-Possible values: 0 (no), 1 (yes)
-
-
-***Note: country, capcode, and id are optional. sticky and closed only display in OPs.***
-
+**Note the following attributes are optional:**  
+`sticky` `closed` (only display on OPs)  
+`id` (only display when board has DISPLAY_ID set)  
+`capcode` (only displays when using a capcode)  
+`country` (only displays when board uses country flags)  
+`filename` (only displays when image uploaded)  
+`ext` (only displays when image uploaded)  
+`fsize` (only displays when image uploaded)  
+`md5` (only displays when image uploaded)  
+`w` (only displays when image uploaded)  
+`h` (only displays when image uploaded)  
+`tn_w` (only displays when image uploaded)  
+`tn_h` (only displays when image uploaded)  
+`filedeleted` (only displays when image uploaded)  
+`spoiler` (only displays when image uploaded)  
 
 ### Example thread ###
-
 
 <pre>
 {
