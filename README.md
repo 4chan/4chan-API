@@ -41,7 +41,7 @@ Questions? Please e-mail api@4chan.org.
 | `country`       | `string`       | Country              | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
 | `email`         | `string`       | Email                | text *or empty*                            | `moot@4chan.org`      |
 | `sub`           | `string`       | Subject              | text *or empty*                            | `This is a subject`   |
-| `com`           | `string`       | Comment              | text *or empty*                            | `This is a comment`   |
+| `com`           | `string`       | Comment              | text (includes escaped HTML) *or empty*    | `This is a comment`   |
 | `tim`           | `integer`      | Renamed filename     | UNIX timestamp + microseconds              | `1344402680740`       |
 | `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
 | `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf               | `.jpg`                |
