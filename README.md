@@ -9,6 +9,8 @@ JSON representations of threads are exposed at the following URLs:
 
 http(s)://api.4chan.org/**board**/res/**threadnumber**.json
 
+*Note: We plan to add indexes and other views at a later date in time.*
+
 CORS is supported with an origin of http(s)://boards.4chan.org
 
 Request methods supported are: GET, HEAD, OPTIONS
@@ -46,7 +48,7 @@ Questions? Please e-mail api@4chan.org.
 | `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
 | `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf               | `.jpg`                |
 | `fsize`         | `integer`      | File size            | 1-8388608                                  | `2500`                |
-| `md5`           | `string`       | File MD5             | text (32 character/16 byte MD5 hash        | `554583e1a577d1b32537c87f72557574` |
+| `md5`           | `string`       | File MD5             | text (24 character, packed base64 MD5 hash)| `NOetrLVnES3jUn1x5ZPVAg==` |
 | `w`             | `integer`      | Image width          | 1-10000                                    | `500`                 |
 | `h`             | `integer`      | Image height         | 1-10000                                    | `500`                 |
 | `tn_w`          | `integer`      | Thumbnail width      | 1-250                                      | `250`                 |
@@ -70,7 +72,7 @@ Questions? Please e-mail api@4chan.org.
 `filedeleted` (only displays when image uploaded)  
 `spoiler` (only displays when image uploaded)  
 
-### Example thread ###
+### Example Thread ###
 
 <pre>
 {
@@ -113,7 +115,7 @@ Questions? Please e-mail api@4chan.org.
          "tn_h":250,
          "tim":1344570123425,
          "time":1344570123,
-         "md5":"554583e1a577d1b32537c87f72557574",
+         "md5":"NOetrLVnES3jUn1x5ZPVAg==",
          "fsize":0,
          "resto":9001,
          "filedeleted":0,
