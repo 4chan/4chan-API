@@ -97,7 +97,7 @@ Boards: http(s)://boards.4chan.org/**board**/
 Indexes: http(s)://boards.4chan.org/**board**/**[1-10]** (varies per board)  
 
 Threads: http(s)://boards.4chan.org/**board**/res/`resto`  
-Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`
+Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`  
 
 Images: http(s)://images.4chan.org/**board**/src/`tim`.`ext`  
 Thumbnails: http(s)://**[0-2]**.thumbs.4chan.org/**board**/thumb/`tim`.jpg (domain is wildcarded)  
@@ -110,6 +110,9 @@ Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif
 Admin capcode icon: http(s)://static.4chan.org/image/adminicon.gif  
 Mod capcode icon: http(s)://static.4chan.org/image/modicon.gif  
 Developer capcode icon: http(s)://static.4chan.org/image/developericon.gif  
+
+Country flags: http(s)://static.4chan.org/image/country/`country`.gif  
+/pol/ country flags: http(s)://static.4chan.org/image/country/troll/`country`.gif  
 
 ### Example Thread ###
 
