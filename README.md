@@ -69,8 +69,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   |
 
 **Note the following attributes are optional:**  
-`sticky` `closed` (only display on OPs)  
-`id` (only display when board has DISPLAY_ID set)  
+`sticky` `closed` (only displays on OPs)  
+`id` (only displays when board has DISPLAY_ID set)  
 `capcode` (only displays when using a capcode)  
 `country` `country_name` (only displays when board uses country flags)  
 `filename` (only displays when image uploaded)  
@@ -83,7 +83,13 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `tn_h` (only displays when image uploaded)  
 `filedeleted` (only displays when image uploaded)  
 `spoiler` (only displays when image uploaded)  
-`custom_spoiler` (only displays when board has custom spoiler images)
+`custom_spoiler` (only display on OPs, only displays when board has custom spoiler images)  
+
+**Note about custom spoilers:**  
+`custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
+For our imageboard pages, the custom spoiler images changes every time a new post is made. If you are writing a browser add-on with auto-update 
+functionality, you should first check the HTML to see if a custom spoiler has been posted, and use the same number, so when new spoiler posts come in, they match the pre-existing ones. 
+If there are no custom spoilers already in a thread, you can just random whatever you'd like, since there is no need to match pre-existing ones.
 
 ### Where are the files? ###
 
@@ -101,7 +107,9 @@ Custom spoilers: http(s)://static.4chan.org/image/spoiler-**board**`custom_spoil
 
 Closed thread icon: http(s)://static.4chan.org/image/closed.gif  
 Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif  
-
+Admin capcode icon: http(s)://static.4chan.org/image/adminicon.gif  
+Mod capcode icon: http(s)://static.4chan.org/image/modicon.gif  
+Developer capcode icon: http(s)://static.4chan.org/image/developericon.gif  
 
 ### Example Thread ###
 
