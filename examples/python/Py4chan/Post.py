@@ -54,7 +54,8 @@ class Py4chanPost(object):
                 log(5, "Didn't find %r", code)
                 setattr(self, info['name'], None)
         
-        self.ImageURL = "%s://images.4chan.org/%s/src/%d.%s" % (self.Proto, self.Board, self.RenamedFilename, self.FileExtension)
-        self.ThumbImageURL = "%s://1.thumbs.4chan.org/%s/thumb/%d.jpg" % (self.Proto, self.Board, self.RenamedFilename)
+        if self.RenamedFilename:
+            self.ImageURL = "%s://images.4chan.org/%s/src/%d.%s" % (self.Proto, self.Board, self.RenamedFilename, self.FileExtension)
+            self.ThumbImageURL = "%s://1.thumbs.4chan.org/%s/thumb/%d.jpg" % (self.Proto, self.Board, self.RenamedFilename)
 
 

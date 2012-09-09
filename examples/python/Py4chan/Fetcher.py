@@ -19,7 +19,7 @@ last = {}
 class Fetch4chan(object):
     # Min time between requests, in seconds
     MinRequestTime = datetime.timedelta(seconds = 1)
-    
+    URL = None
     def __init__(self, proxies = {}, url = None):
         """
         proxies=dict(http="http://www.someproxy.com:3128")
@@ -34,7 +34,7 @@ class Fetch4chan(object):
             raise ValueError, "No URL defined"
         self.Proxies = proxies
     
-    def fetchText(self, data = {}, sleep = True):
+    def fetchText(self, data = '', sleep = True):
         """ Fetch all data from self.URL
         data: A key:value mapping of post data to send with the request
         sleep: Sleep if needed to keep above MinRequestTime. Error otherwise. 
@@ -57,7 +57,9 @@ class Fetch4chan(object):
         
         try:
             log(5, "Going to open %r", self.URL)
-            fHandle = urlopen(self.URL, data, proxies = self.Proxies)
+            if data == '':
+                data = None
+            fHandle = urlopen(url = self.URL, data = data, proxies = self.Proxies)
             log(10, "Successfully opened url: %r", fHandle)
         except Exception, e:
             log(40, "Failed to open %r with %r", self.URL, e)
@@ -70,7 +72,7 @@ class Fetch4chan(object):
         finally:
             fHandle.close()
     
-    def fetchJSON(self, data = {}, sleep = True):
+    def fetchJSON(self, data = '', sleep = True):
         """ Fetch all JSON from self.URL and return decoded
         data: A key:value mapping of post data to send with the request
         sleep: Sleep if needed to keep above MinRequestTime. Error otherwise. 
