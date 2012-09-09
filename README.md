@@ -15,17 +15,28 @@ CORS is supported with an origin of http(s)://boards.4chan.org
 
 Request methods supported are: GET, HEAD, OPTIONS
 
-I will update this guide to suck less at a later point in time. If you'd like to rewrite it, be my guest!
+Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-Questions? Please e-mail api@4chan.org.
+*This guide was last updated September 9, 2012.*
 
-### Rules ###
+### API Rules ###
 
-* Do not make more than one request per second.
-* Use If-Modified-Since when doing your requests.
-* More to come later...
+1. Do not make more than one request per second.
+2. Thread updating should be set to a minimum of 10 seconds, preferably higher.
+3. Use If-Modified-Since when doing your requests.
+4. Make API requests using the same protocol as the app. Only use SSL when a user is accessing your app over HTTPS.
+5. More to come later...
 
-### Post Object ####
+### API Terms of Service ###
+
+1. You may not use "4chan" in the title of your application, product, or service.
+2. You may not use the 4chan name, logo, or brand to promote your application, product, or service.
+3. You must disclose the source of the information shown by your application, product, or service as 4chan, and provide a link.
+4. You may not market your application, product, or service as being "official" in any way.
+5. You may not clone the live site and its functionality. This means don't suck down our JSON, host it elsewhere, and throw ads around it.
+6. These terms are subject to change without notice.
+
+### Posts Object ####
 
 | **attribute**   | **value**      | **description**      | **possible values**                        | **example value**     |
 |:----------------|:---------------|:---------------------|:-------------------------------------------|:----------------------|
@@ -55,6 +66,7 @@ Questions? Please e-mail api@4chan.org.
 | `tn_h`          | `integer`      | Thumbnail height     | 1-250                                      | `250`                 |
 | `filedeleted`   | `integer`      | File deleted?        | 0 (no), 1 (yes)                            | `0`                   |
 | `spoiler`       | `integer`      | Spoiler image?       | 0 (no), 1 (yes)                            | `0`                   |
+| `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` (only display on OPs)  
@@ -71,6 +83,25 @@ Questions? Please e-mail api@4chan.org.
 `tn_h` (only displays when image uploaded)  
 `filedeleted` (only displays when image uploaded)  
 `spoiler` (only displays when image uploaded)  
+`custom_spoiler` (only displays when board has custom spoiler images)
+
+### Where are the files? ###
+
+Boards: http(s)://boards.4chan.org/**board**/  
+Indexes: http(s)://boards.4chan.org/**board**/**[1-10]** (varies per board)  
+
+Threads: http(s)://boards.4chan.org/**board**/res/`resto`  
+Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`
+
+Images: http(s)://images.4chan.org/**board**/src/`tim`.`ext`  
+Thumbnails: http(s)://**[0-2]**.thumbs.4chan.org/**board**/thumb/`tim`.jpg (domain is wildcarded)  
+
+Spoiler image: http(s)://static.4chan.org/image/spoiler.png  
+Custom spoilers: http(s)://static.4chan.org/image/spoiler-**board**`custom_spoiler`.png  
+
+Closed thread icon: http(s)://static.4chan.org/image/closed.gif  
+Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif  
+
 
 ### Example Thread ###
 
