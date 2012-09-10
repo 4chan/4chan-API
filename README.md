@@ -46,7 +46,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `0`                   |
 | `now`           | `string`       | Date and time        | MM\/DD\/YY(Day)HH:MM (:SS on some boards)  | `08\/08\/12(Wed)01:11`|
 | `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          |
-| `name`          | `string`       | Name                 | text *or empty*                            | `moot`                |
+| `name`          | `string`       | Name                 | text                                       | `moot`                |
 | `trip`          | `string`       | Tripcode             | text (format: !tripcode!!securetripcode)   | `!Ep8pui8Vw2`         |
 | `id`            | `string`       | ID                   | text (8 characters), Mod, Admin            | `Admin`               |
 | `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, developer | `admin`             |
@@ -71,6 +71,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs)  
 `id` (only displays when board has DISPLAY_ID set)  
+`trip` (only displays if name is present, which is always unless there is a blank name and tripcode)  
 `trip` (only displays if tripcode is present)  
 `email` (only displays if email is present)  
 `sub` (only displays if subject is present)  
