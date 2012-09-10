@@ -52,9 +52,9 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, developer | `admin`             |
 | `country`       | `string`       | Country code         | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
 | `country_name`  | `string`       | Country name         | text                                       | `Unknown`             |
-| `email`         | `string`       | Email                | text *or empty*                            | `moot@4chan.org`      |
-| `sub`           | `string`       | Subject              | text *or empty*                            | `This is a subject`   |
-| `com`           | `string`       | Comment              | text (includes escaped HTML) *or empty*    | `This is a comment`   |
+| `email`         | `string`       | Email                | text                                       | `moot@4chan.org`      |
+| `sub`           | `string`       | Subject              | text                                       | `This is a subject`   |
+| `com`           | `string`       | Comment              | text (includes escaped HTML)               | `This is a comment`   |
 | `tim`           | `integer`      | Renamed filename     | UNIX timestamp + microseconds              | `1344402680740`       |
 | `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
 | `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf               | `.jpg`                |
@@ -71,6 +71,10 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs)  
 `id` (only displays when board has DISPLAY_ID set)  
+`trip` (only displays if tripcode is present)  
+`email` (only displays if email is present)  
+`sub` (only displays if subject is present)  
+`com` (only displays if comment is present)  
 `capcode` (only displays when using a capcode)  
 `country` `country_name` (only displays when board uses country flags)  
 `filename` (only displays when image uploaded)  
