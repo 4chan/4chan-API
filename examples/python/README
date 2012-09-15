@@ -20,6 +20,6 @@ Using Py4chan
 	# Loop over all posts in the thread and print out info from the post
 	for post in t.Posts:
 		print "--- %d ---"%post.Number
-		print "Subject: "+post.Subject
-		print post.Comment
+		print "Subject: %s"%post.Subject
+		print "Comment: %s"%post.Comment
 		
