@@ -23,3 +23,15 @@ Using Py4chan
 		print "Subject: %s"%post.Subject
 		print "Comment: %s"%post.Comment
 		
+Py4chan Testing Steps
+	1) Copy "Test.conf.ini.sample" to "Test.conf.ini"
+	2) Edit "Test.conf.ini"
+		a) Update the threadID with the thread ID number from current threads
+		b) Optionally, change what board is being used
+		c) Optionally, change the loggingLevel. The logging module's DEBUG, INFO, 
+			and other level variables will give the meaning of different values. 
+		d) Optionally, Add additional sections with other threads to repeat a test.  
+	3) Run "Test.py". No arguments are required. 
+	4) If logging is set at or below INFO, a table will be displayed that shows
+		the results of the different tests.  
+	

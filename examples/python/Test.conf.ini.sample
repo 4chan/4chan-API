@@ -1,0 +1,14 @@
+# DON'T FORGET TO COPY THIS FILE TO Test.conf.ini
+[Global]
+# Logging level
+# Valid: 1-50
+loggingLevel=10
+
+[ThreadMain-1]
+boardID=diy
+threadID=296766
+
+[ThreadMain-2]
+boardID=diy
+threadID=296862
+
