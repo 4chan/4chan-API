@@ -1,8 +1,3 @@
-''' A simple Python API for read-only access to the 4chan API. 
-Created on Sep 9, 2012
-
-@author: Paulson McIntyre (GpMidi) <paul@gpmidi.net>
-'''
 #===============================================================================
 #    This file is part of Py4chan. 
 #
@@ -19,6 +14,3 @@ Created on Sep 9, 2012
 #    You should have received a copy of the GNU General Public License
 #    along with PyPWSafe.  If not, see http://www.gnu.org/licenses/old-licenses/gpl-2.0.html 
 #===============================================================================
-
-from Thread import Py4chanThread
-
