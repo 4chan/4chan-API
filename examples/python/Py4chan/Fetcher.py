@@ -101,8 +101,8 @@ class Fetch4chan(object):
         if len(text) == 0:
             raise NoDataReturnedError, "A zero byte file was returned"
         i = 1
-        while i * 10 < len(text):
-            log(5, 'Fetched data (line %05d): %r' % (i, text[(i - 1) * 10:i * 10]))
+        while i * 50 < len(text):
+            log(5, 'Fetched data (line %05d): %r' % (i, text[(i - 1) * 50:i * 50]))
             i += 1
         log(10, "Translating JSON into objects")            
         ret = loads(text)
