@@ -27,6 +27,7 @@ log = logger.log
 
 from Fetcher import Fetch4chan
 from Post import Py4chanPost
+from Errors import NoDataReturnedError, ThreadNotFoundError # Don't import *; it will overwrite logging vars
 
 class Py4chanThread(Fetch4chan):
     """ Represent a thread from a 4chan board
@@ -45,9 +46,13 @@ class Py4chanThread(Fetch4chan):
         self.update()
         
     def update(self, sleep = True):
+        """ Download and update local data with data from 4chan. """
         self.Posts = []
+        try:
+            json = self.fetchJSON(sleep = sleep)
+        except NoDataReturnedError:
+            raise ThreadNotFoundError, "Thread ID %r from %r was not found on the server. " % (self.Thread, self.Board)
         
-        json = self.fetchJSON(sleep = sleep)
         for postData in json['posts']:
             self.Posts.append(Py4chanPost(board = self.Board, postData = postData, proto = self.Proto)) 
             

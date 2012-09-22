@@ -30,6 +30,8 @@ import datetime
 from json import loads
 import time
 
+from Errors import NoDataReturnedError
+
 # Keep track of last request
 last = {}
 
@@ -94,9 +96,15 @@ class Fetch4chan(object):
         data: A key:value mapping of post data to send with the request
         sleep: Sleep if needed to keep above MinRequestTime. Error otherwise. 
         """
-        log(5, 'Going to fetch %r as JSON', self.URL)
+        log(10, 'Going to fetch %r as JSON', self.URL)
         text = self.fetchText(data = data, sleep = sleep)
-        log(5, 'Decoding JSON from %r...', text[:1000])
+        if len(text) == 0:
+            raise NoDataReturnedError, "A zero byte file was returned"
+        i = 1
+        while i * 10 < len(text):
+            log(5, 'Fetched data (line %05d): %r' % (i, text[(i - 1) * 10:i * 10]))
+            i += 1
+        log(10, "Translating JSON into objects")            
         ret = loads(text)
         log(5, 'Decoded %r', ret)
         return ret
