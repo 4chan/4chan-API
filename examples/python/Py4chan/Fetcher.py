@@ -68,7 +68,7 @@ class Fetch4chan(object):
                 # Time is going forward & we're requesting too quickly
                 sleepTime = self.MinRequestTime - delta
                 log(10, "Going to quickly, sleeping for %r", sleepTime)
-                time.sleep(sleepTime)                                
+                time.sleep(float(sleepTime.seconds))                                
         else:
             log(5, "First request")
         # Record last request dt
