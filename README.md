@@ -66,6 +66,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `filedeleted`   | `integer`      | File deleted?        | 0 (no), 1 (yes)                            | `0`                   |
 | `spoiler`       | `integer`      | Spoiler image?       | 0 (no), 1 (yes)                            | `0`                   |
 | `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   |
+| `omitted_posts` | `integer`      | # replies omitted    | 1-10000                                    | `33`                  |
+| `omitted_images`| `integer`      | # image replies omitted | 1-10000                                 | `21`                  |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs)  
@@ -88,6 +90,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `filedeleted` (only displays when image uploaded)  
 `spoiler` (only displays when image uploaded)  
 `custom_spoiler` (only display on OPs, only displays when board has custom spoiler images)  
+`omitted_posts` (only displays on OPs on index pages)  
+`omitted_images` (only displays on OPs on idnex pages)  
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
