@@ -91,7 +91,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `spoiler` (only displays when image uploaded)  
 `custom_spoiler` (only display on OPs, only displays when board has custom spoiler images)  
 `omitted_posts` (only displays on OPs on index pages)  
-`omitted_images` (only displays on OPs on idnex pages)  
+`omitted_images` (only displays on OPs on index pages)  
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
