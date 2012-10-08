@@ -104,7 +104,7 @@ Threads: http(s)://boards.4chan.org/**board**/res/`resto`
 Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`  
 
 Images: http(s)://images.4chan.org/**board**/src/`tim`.`ext`  
-Thumbnails: http(s)://thumbs.4chan.org/**board**/thumb/`tim`.jpg  
+Thumbnails: http(s)://thumbs.4chan.org/**board**/thumb/`tim`s.jpg  
 
 Spoiler image: http(s)://static.4chan.org/image/spoiler.png  
 Custom spoilers: http(s)://static.4chan.org/image/spoiler-**board**`custom_spoiler`.png  
