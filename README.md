@@ -5,11 +5,10 @@
 
 Welcome to 4chan's poorly documented read-only JSON API guide!
 
-JSON representations of threads are exposed at the following URLs:
+JSON representations of threads and indexes are exposed at the following URLs:
 
-http(s)://api.4chan.org/**board**/res/**threadnumber**.json
-
-*Note: We plan to add indexes and other views at a later date in time.*
+http(s)://api.4chan.org/**board**/res/**threadnumber**.json  
+http(s)://api.4chan.org/**board**/**pagenumber**.json (0 is main index)
 
 CORS is supported with an origin of http(s)://boards.4chan.org
 
@@ -17,7 +16,7 @@ Request methods supported are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated September 9, 2012.*
+*This guide was last updated October 7, 2012.*
 
 ### API Rules ###
 
@@ -99,13 +98,13 @@ If there are no custom spoilers already in a thread, you can just random whateve
 ### Where are the files? ###
 
 Boards: http(s)://boards.4chan.org/**board**/  
-Indexes: http(s)://boards.4chan.org/**board**/**[1-10]** (varies per board)  
+Indexes: http(s)://boards.4chan.org/**board**/**[1-10]** (# of pages varies per board, directory root is page 0)  
 
 Threads: http(s)://boards.4chan.org/**board**/res/`resto`  
 Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`  
 
 Images: http(s)://images.4chan.org/**board**/src/`tim`.`ext`  
-Thumbnails: http(s)://**[0-2]**.thumbs.4chan.org/**board**/thumb/`tim`.jpg (domain is wildcarded)  
+Thumbnails: http(s)://thumbs.4chan.org/**board**/thumb/`tim`.jpg  
 
 Spoiler image: http(s)://static.4chan.org/image/spoiler.png  
 Custom spoilers: http(s)://static.4chan.org/image/spoiler-**board**`custom_spoiler`.png  
@@ -115,6 +114,8 @@ Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif
 Admin capcode icon: http(s)://static.4chan.org/image/adminicon.gif  
 Mod capcode icon: http(s)://static.4chan.org/image/modicon.gif  
 Developer capcode icon: http(s)://static.4chan.org/image/developericon.gif  
+File deleted (for OPs): http(s)://static.4chan.org/image/filedeleted.gif  
+File deleted (for replies): http(s)://static.4chan.org/image/filedeleted-res.gif  
 
 Country flags: http(s)://static.4chan.org/image/country/`country`.gif  
 /pol/ country flags: http(s)://static.4chan.org/image/country/troll/`country`.gif  
