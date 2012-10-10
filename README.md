@@ -65,6 +65,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `tn_h`          | `integer`      | Thumbnail height     | 1-250                                      | `250`                 |
 | `filedeleted`   | `integer`      | File deleted?        | 0 (no), 1 (yes)                            | `0`                   |
 | `spoiler`       | `integer`      | Spoiler image?       | 0 (no), 1 (yes)                            | `0`                   |
+| `worksafe`      | `integer`      | Safe for work board? | 0 (no), 1 (yes)                            | `0`                   |
 | `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   |
 | `omitted_posts` | `integer`      | # replies omitted    | 1-10000                                    | `33`                  |
 | `omitted_images`| `integer`      | # image replies omitted | 1-10000                                 | `21`                  |
