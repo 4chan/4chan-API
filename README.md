@@ -12,6 +12,8 @@ http(s)://api.4chan.org/**board**/**pagenumber**.json (0 is main index)
 
 CORS is supported with an origin of http(s)://boards.4chan.org
 
+JSONP is supported
+
 Request methods supported are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
