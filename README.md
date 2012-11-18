@@ -68,9 +68,13 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   |
 | `omitted_posts` | `integer`      | # replies omitted    | 1-10000                                    | `33`                  |
 | `omitted_images`| `integer`      | # image replies omitted | 1-10000                                 | `21`                  |
+| `replies`       | `integer`      | # replies total      | 0-99999                                    | `231`                 |
+| `images`        | `integer`      | # images total       | 0-99999                                    | `132`                 |
+| `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
+| `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
 
 **Note the following attributes are optional:**  
-`sticky` `closed` (only displays on OPs)  
+`sticky` `closed` (only displays on OPs when true)  
 `id` (only displays when board has DISPLAY_ID set)  
 `name` (only displays if name is present, which is always unless there is a blank name and tripcode)  
 `trip` (only displays if tripcode is present)  
@@ -92,6 +96,10 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `custom_spoiler` (only display on OPs, only displays when board has custom spoiler images)  
 `omitted_posts` (only displays on OPs on index pages)  
 `omitted_images` (only displays on OPs on index pages)  
+`replies` (only displays on OPs)  
+`images` (only displays on OPs)  
+`bumplimit` (only displays on OPs when true)  
+`imagelimit` (only displays on OPs when true)  
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
