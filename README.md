@@ -10,6 +10,10 @@ JSON representations of threads and indexes are exposed at the following URLs:
 http(s)://api.4chan.org/**board**/res/**threadnumber**.json  
 http(s)://api.4chan.org/**board**/**pagenumber**.json (0 is main index)
 
+A JSON representation of all thread OPs from an individual board can be found at the following URL:
+
+http(s)://api.4chan.org/**board**/catalog.json
+
 A list of boards is exposed at the following URL:
 
 http(s)://api.4chan.org/boards.json
@@ -20,7 +24,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated November 26, 2012.*
+*This guide was last updated January 1, 2013.*
 
 ### API Rules ###
 
