@@ -24,7 +24,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated January 1, 2013.*
+*This guide was last updated January 4, 2013.*
 
 ### API Rules ###
 
@@ -140,56 +140,6 @@ File deleted (for replies): http(s)://static.4chan.org/image/filedeleted-res.gif
 Country flags: http(s)://static.4chan.org/image/country/`country`.gif  
 /pol/ country flags: http(s)://static.4chan.org/image/country/troll/`country`.gif  
 
-### Example Thread ###
+### Examples ###
 
-<pre>
-{
-   "posts":[
-      {
-         "no":9001,
-         "sticky":1,
-         "closed":0,
-         "now":"08\/08\/12(Wed)01:11",
-         "name":"User",
-         "email":"",
-         "sub":"This is an OP.",
-         "com":"This is a great comment!",
-         "filename":"",
-         "ext":"",
-         "w":0,
-         "h":0,
-         "tn_w":0,
-         "tn_h":0,
-         "tim":1344402680740,
-         "time":1344402680,
-         "md5":"",
-         "fsize":0,
-         "resto":0,
-         "filedeleted":0,
-         "trip":"!ozOtJW9BFA"
-      },
-      {
-         "no":33576,
-         "now":"08\/09\/12(Thu)23:42",
-         "name":"moot",
-         "email":"",
-         "sub":"This is a reply.",
-         "com":"OP is a ___.",
-         "filename":"opisa",
-         "ext":".jpg",
-         "w":500,
-         "h":500,
-         "tn_w":250,
-         "tn_h":250,
-         "tim":1344570123425,
-         "time":1344570123,
-         "md5":"NOetrLVnES3jUn1x5ZPVAg==",
-         "fsize":0,
-         "resto":9001,
-         "filedeleted":0,
-         "capcode":"admin",
-         "trip":""
-      }
-   ]
-}
-</pre>
+To view a pretty-printed version of our thread, index, and catalog JSON, use [JSONLint](http://jsonlint.com).
