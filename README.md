@@ -7,12 +7,12 @@ Welcome to 4chan's poorly documented read-only JSON API guide!
 
 JSON representations of threads and indexes are exposed at the following URLs:
 
-http(s)://api.4chan.org/**board**/res/**threadnumber**.json  
-http(s)://api.4chan.org/**board**/**pagenumber**.json (0 is main index)
+http(s)://api.4chan.org/`board`/res/`threadnumber`.json  
+http(s)://api.4chan.org/`board`/`pagenumber`.json (0 is main index)
 
 A JSON representation of all thread OPs from an individual board can be found at the following URL:
 
-http(s)://api.4chan.org/**board**/catalog.json
+http(s)://api.4chan.org/`board`/catalog.json
 
 A list of boards is exposed at the following URL:
 
@@ -24,13 +24,13 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated January 4, 2013.*
+*This guide was last updated January 29th, 2013.*
 
 ### API Rules ###
 
 1. Do not make more than one request per second.
 2. Thread updating should be set to a minimum of 10 seconds, preferably higher.
-3. Use If-Modified-Since when doing your requests.
+3. Use `If-Modified-Since` when doing your requests.
 4. Make API requests using the same protocol as the app. Only use SSL when a user is accessing your app over HTTPS.
 5. More to come later...
 
@@ -81,7 +81,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
 | `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
 
-**Note the following attributes are optional:**  
+**Note, the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs when true)  
 `id` (only displays when board has DISPLAY_ID set)  
 `name` (only displays if name is present, which is always unless there is a blank name and tripcode)  
@@ -117,17 +117,17 @@ If there are no custom spoilers already in a thread, you can just random whateve
 
 ### Where are the files? ###
 
-Boards: http(s)://boards.4chan.org/**board**/  
-Indexes: http(s)://boards.4chan.org/**board**/**[1-10]** (# of pages varies per board, directory root is page 0)  
+Boards: http(s)://boards.4chan.org/`board`/  
+Indexes: http(s)://boards.4chan.org/`board`/`[1-10]` (# of pages varies per board, directory root is page 0)  
 
-Threads: http(s)://boards.4chan.org/**board**/res/`resto`  
-Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`  
+Threads: http(s)://boards.4chan.org/`board`/res/`resto`  
+Replies: http(s)://boards.4chan.org/`board`/res/`resto`#p`no`  
 
-Images: http(s)://images.4chan.org/**board**/src/`tim`.`ext`  
-Thumbnails: http(s)://thumbs.4chan.org/**board**/thumb/`tim`s.jpg  
+Images: http(s)://images.4chan.org/`board`/src/`tim`.`ext`  
+Thumbnails: http(s)://thumbs.4chan.org/`board`/thumb/`tim`s.jpg  
 
 Spoiler image: http(s)://static.4chan.org/image/spoiler.png  
-Custom spoilers: http(s)://static.4chan.org/image/spoiler-**board**`custom_spoiler`.png  
+Custom spoilers: http(s)://static.4chan.org/image/spoiler-`board``custom_spoiler`.png  
 
 Closed thread icon: http(s)://static.4chan.org/image/closed.gif  
 Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif  
