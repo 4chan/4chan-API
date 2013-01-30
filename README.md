@@ -7,12 +7,12 @@ Welcome to 4chan's poorly documented read-only JSON API guide!
 
 JSON representations of threads and indexes are exposed at the following URLs:
 
-http(s)://api.4chan.org/**board**/res/**threadnumber**.json  
-http(s)://api.4chan.org/**board**/**pagenumber**.json (0 is main index)
+http(s)://api.4chan.org/`board`/res/`threadnumber`.json  
+http(s)://api.4chan.org/`board`/`pagenumber`.json (0 is main index)
 
 A JSON representation of all thread OPs from an individual board can be found at the following URL:
 
-http(s)://api.4chan.org/**board**/catalog.json
+http(s)://api.4chan.org/`board`/catalog.json
 
 A list of boards is exposed at the following URL:
 
@@ -117,17 +117,17 @@ If there are no custom spoilers already in a thread, you can just random whateve
 
 ### Where are the files? ###
 
-Boards: http(s)://boards.4chan.org/**board**/  
-Indexes: http(s)://boards.4chan.org/**board**/**[1-10]** (# of pages varies per board, directory root is page 0)  
+Boards: http(s)://boards.4chan.org/`board`/  
+Indexes: http(s)://boards.4chan.org/`board`/`[1-10]` (# of pages varies per board, directory root is page 0)  
 
-Threads: http(s)://boards.4chan.org/**board**/res/`resto`  
-Replies: http(s)://boards.4chan.org/**board**/res/`resto`#p`no`  
+Threads: http(s)://boards.4chan.org/`board`/res/`resto`  
+Replies: http(s)://boards.4chan.org/`board`/res/`resto`#p`no`  
 
-Images: http(s)://images.4chan.org/**board**/src/`tim`.`ext`  
-Thumbnails: http(s)://thumbs.4chan.org/**board**/thumb/`tim`s.jpg  
+Images: http(s)://images.4chan.org/`board`/src/`tim`.`ext`  
+Thumbnails: http(s)://thumbs.4chan.org/`board`/thumb/`tim`s.jpg  
 
 Spoiler image: http(s)://static.4chan.org/image/spoiler.png  
-Custom spoilers: http(s)://static.4chan.org/image/spoiler-**board**`custom_spoiler`.png  
+Custom spoilers: http(s)://static.4chan.org/image/spoiler-`board``custom_spoiler`.png  
 
 Closed thread icon: http(s)://static.4chan.org/image/closed.gif  
 Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif  
