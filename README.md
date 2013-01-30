@@ -24,13 +24,13 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated January 4, 2013.*
+*This guide was last updated January 29th, 2013.*
 
 ### API Rules ###
 
 1. Do not make more than one request per second.
 2. Thread updating should be set to a minimum of 10 seconds, preferably higher.
-3. Use If-Modified-Since when doing your requests.
+3. Use `If-Modified-Since` when doing your requests.
 4. Make API requests using the same protocol as the app. Only use SSL when a user is accessing your app over HTTPS.
 5. More to come later...
 
@@ -81,7 +81,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
 | `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
 
-**Note the following attributes are optional:**  
+**Note, the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs when true)  
 `id` (only displays when board has DISPLAY_ID set)  
 `name` (only displays if name is present, which is always unless there is a blank name and tripcode)  
