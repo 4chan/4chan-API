@@ -14,6 +14,10 @@ A JSON representation of all thread OPs from an individual board can be found at
 
 http(s)://api.4chan.org/`board`/catalog.json
 
+And just the thread IDs and their respective pages can be found here:
+
+http(s)://api.4chan.org/`board`/threads.json
+
 A list of boards is exposed at the following URL:
 
 http(s)://api.4chan.org/boards.json
@@ -24,7 +28,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated January 4, 2013.*
+*This guide was last updated March 22, 2013.*
 
 ### API Rules ###
 
