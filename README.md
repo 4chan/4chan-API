@@ -10,7 +10,7 @@ JSON representations of threads and indexes are exposed at the following URLs:
 http(s)://api.4chan.org/`board`/res/`threadnumber`.json  
 http(s)://api.4chan.org/`board`/`pagenumber`.json (0 is main index)
 
-A JSON representation of all thread OPs (and replies shown on indexes) from an individual board can be found at the following URL:
+A JSON representation of all thread OPs (and the replies shown on indexes) from an individual board can be found at the following URL:
 
 http(s)://api.4chan.org/`board`/catalog.json
 
@@ -114,7 +114,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `images` (only displays on OPs)  
 `bumplimit` (only displays on OPs when true)  
 `imagelimit` (only displays on OPs when true)  
-`capcode_replies` (only displays on /q/ when there are capcode user replies)
+`capcode_replies` (only displays on /q/ when there are capcode user replies)  
 `last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)
 
 **Note about custom spoilers:**  
