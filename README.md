@@ -10,11 +10,11 @@ JSON representations of threads and indexes are exposed at the following URLs:
 http(s)://api.4chan.org/`board`/res/`threadnumber`.json  
 http(s)://api.4chan.org/`board`/`pagenumber`.json (0 is main index)
 
-A JSON representation of all thread OPs from an individual board can be found at the following URL:
+A JSON representation of all thread OPs (and replies shown on indexes) from an individual board can be found at the following URL:
 
 http(s)://api.4chan.org/`board`/catalog.json
 
-And just the thread IDs and their respective pages can be found here:
+And just the thread IDs, their modification times, and respective pages can be found here:
 
 http(s)://api.4chan.org/`board`/threads.json
 
@@ -28,7 +28,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated March 22, 2013.*
+*This guide was last updated September 2, 2013.*
 
 ### API Rules ###
 
@@ -44,7 +44,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 2. You may not use the 4chan name, logo, or brand to promote your application, product, or service.
 3. You must disclose the source of the information shown by your application, product, or service as 4chan, and provide a link.
 4. You may not market your application, product, or service as being "official" in any way.
-5. You may not clone the live site and its functionality. This means don't suck down our JSON, host it elsewhere, and throw ads around it.
+5. You may not clone 4chan or its existing features/functionality. Example: Don't suck down our JSON, host it elsewhere, and throw ads around it.
 6. These terms are subject to change without notice.
 
 ### Posts Object ####
@@ -84,6 +84,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `images`        | `integer`      | # images total       | 0-99999                                    | `132`                 |
 | `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
 | `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
+| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and # of replies     | `'admin':3,'mod':1`   |
+| `last_modified`   | `integer`    | Time when last modified | UNIX timestamp                          |  `1344571233`         |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs when true)  
@@ -112,6 +114,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `images` (only displays on OPs)  
 `bumplimit` (only displays on OPs when true)  
 `imagelimit` (only displays on OPs when true)  
+`capcode_replies` (only displays on /q/ when there are capcode user replies)
+`last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
