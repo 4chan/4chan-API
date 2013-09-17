@@ -84,7 +84,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `images`        | `integer`      | # images total       | 0-99999                                    | `132`                 |
 | `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
 | `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
-| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and # of replies     | `'admin':3,'mod':1`   |
+| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs     | `{"admin":[1234,1267]}`   |
 | `last_modified`   | `integer`    | Time when last modified | UNIX timestamp                          |  `1344571233`         |
 
 **Note the following attributes are optional:**  
