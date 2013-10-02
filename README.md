@@ -85,7 +85,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
 | `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
 | `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs     | `{"admin":[1234,1267]}`   |
-| `last_modified`   | `integer`    | Time when last modified | UNIX timestamp                          |  `1344571233`         |
+| `last_modified`   | `integer`    | Time when last modified | UNIX timestamp                          | `1344571233`          |
+| `tag`             | `string`     | Thread tag           | text                                       | `Loop`                |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs when true)  
@@ -116,6 +117,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `imagelimit` (only displays on OPs when true)  
 `capcode_replies` (only displays on /q/ when there are capcode user replies)  
 `last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)
+`tag` (only displays on /f/)
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
