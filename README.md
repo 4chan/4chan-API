@@ -7,20 +7,20 @@ Welcome to 4chan's poorly documented read-only JSON API guide!
 
 JSON representations of threads and indexes are exposed at the following URLs:
 
-http(s)://api.4chan.org/`board`/res/`threadnumber`.json  
-http(s)://api.4chan.org/`board`/`pagenumber`.json (0 is main index)
+http(s)://a.4cdn.org/`board`/res/`threadnumber`.json  
+http(s)://a.4cdn.org/`board`/`pagenumber`.json (0 is main index)
 
 A JSON representation of all thread OPs (and the replies shown on indexes) from an individual board can be found at the following URL:
 
-http(s)://api.4chan.org/`board`/catalog.json
+http(s)://a.4cdn.org/`board`/catalog.json
 
 And just the thread IDs, their modification times, and respective pages can be found here:
 
-http(s)://api.4chan.org/`board`/threads.json
+http(s)://a.4cdn.org/`board`/threads.json
 
 A list of boards is exposed at the following URL:
 
-http(s)://api.4chan.org/boards.json
+http(s)://a.4cdn.org/boards.json
 
 CORS is supported with an origin of http(s)://boards.4chan.org
 
@@ -133,22 +133,22 @@ Indexes: http(s)://boards.4chan.org/`board`/`[1-10]` (# of pages varies per boar
 Threads: http(s)://boards.4chan.org/`board`/res/`resto`  
 Replies: http(s)://boards.4chan.org/`board`/res/`resto`#p`no`  
 
-Images: http(s)://images.4chan.org/`board`/src/`tim`.`ext`  
-Thumbnails: http(s)://thumbs.4chan.org/`board`/thumb/`tim`s.jpg  
+Images: http(s)://i.4cdn.org/`board`/src/`tim`.`ext`  
+Thumbnails: http(s)://t.4cdn.org/`board`/thumb/`tim`s.jpg  
 
-Spoiler image: http(s)://static.4chan.org/image/spoiler.png  
-Custom spoilers: http(s)://static.4chan.org/image/spoiler-`board``custom_spoiler`.png  
+Spoiler image: http(s)://s.4cdn.org/image/spoiler.png  
+Custom spoilers: http(s)://s.4cdn.org/image/spoiler-`board``custom_spoiler`.png  
 
-Closed thread icon: http(s)://static.4chan.org/image/closed.gif  
-Sticky thread icon: http(s)://static.4chan.org/image/sticky.gif  
-Admin capcode icon: http(s)://static.4chan.org/image/adminicon.gif  
-Mod capcode icon: http(s)://static.4chan.org/image/modicon.gif  
-Developer capcode icon: http(s)://static.4chan.org/image/developericon.gif  
-File deleted (for OPs): http(s)://static.4chan.org/image/filedeleted.gif  
-File deleted (for replies): http(s)://static.4chan.org/image/filedeleted-res.gif  
+Closed thread icon: http(s)://s.4cdn.org/image/closed.gif  
+Sticky thread icon: http(s)://s.4cdn.org/image/sticky.gif  
+Admin capcode icon: http(s)://s.4cdn.org/image/adminicon.gif  
+Mod capcode icon: http(s)://s.4cdn.org/image/modicon.gif  
+Developer capcode icon: http(s)://s.4cdn.org/image/developericon.gif  
+File deleted (for OPs): http(s)://s.4cdn.org/image/filedeleted.gif  
+File deleted (for replies): http(s)://s.4cdn.org/image/filedeleted-res.gif  
 
-Country flags: http(s)://static.4chan.org/image/country/`country`.gif  
-/pol/ country flags: http(s)://static.4chan.org/image/country/troll/`country`.gif  
+Country flags: http(s)://s.4cdn.org/image/country/`country`.gif  
+/pol/ country flags: http(s)://s.4cdn.org/image/country/troll/`country`.gif  
 
 ### Examples ###
 
