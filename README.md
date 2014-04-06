@@ -68,7 +68,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `com`           | `string`       | Comment              | text (includes escaped HTML)               | `This is a comment`   |
 | `tim`           | `integer`      | Renamed filename     | UNIX timestamp + microseconds              | `1344402680740`       |
 | `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
-| `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf               | `.jpg`                |
+| `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf, .webm        | `.jpg`                |
 | `fsize`         | `integer`      | File size            | 1-8388608                                  | `2500`                |
 | `md5`           | `string`       | File MD5             | text (24 character, packed base64 MD5 hash)| `NOetrLVnES3jUn1x5ZPVAg==` |
 | `w`             | `integer`      | Image width          | 1-10000                                    | `500`                 |
