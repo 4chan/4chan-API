@@ -1,6 +1,10 @@
 4chan API
 =========
 
+## IMPORTANT INFORMATION ABOUT UPCOMING NAMESPACE CHANGES ##
+
+Please refer to [this 4chan Blog post](http://blog.4chan.org/post/82477681005/upcoming-namespace-changes) detailing upcoming namespace changes, and make appropriate updates to your applications.
+
 ## Welcome ##
 
 Welcome to 4chan's poorly documented read-only JSON API guide!
