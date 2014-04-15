@@ -3,7 +3,9 @@
 
 ## IMPORTANT INFORMATION ABOUT UPCOMING NAMESPACE CHANGES ##
 
-Please refer to [this 4chan Blog post](http://blog.4chan.org/post/82477681005/upcoming-namespace-changes) detailing upcoming namespace changes, and make appropriate updates to your applications.
+Please refer to [this 4chan Blog post](http://blog.4chan.org/post/82477681005/upcoming-namespace-changes) detailing upcoming namespace changes, and make appropriate updates to your applications.  
+
+EDIT ON 4/15/14: API doc is now updated to account for upcoming changes. Please stage your update and be prepared to push it live soon after we make our changes.
 
 ## Welcome ##
 
@@ -11,8 +13,8 @@ Welcome to 4chan's poorly documented read-only JSON API guide!
 
 JSON representations of threads and indexes are exposed at the following URLs:
 
-http(s)://a.4cdn.org/`board`/res/`threadnumber`.json  
-http(s)://a.4cdn.org/`board`/`pagenumber`.json (0 is main index)
+http(s)://a.4cdn.org/`board`/thread/`threadnumber`.json  
+http(s)://a.4cdn.org/`board`/`pagenumber`.json (1 is main index)
 
 A JSON representation of all thread OPs (and the replies shown on indexes) from an individual board can be found at the following URL:
 
@@ -32,7 +34,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated April 6, 2014.*
+*This guide was last updated April 15, 2014.*
 
 ### API Rules ###
 
@@ -88,9 +90,10 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `images`        | `integer`      | # images total       | 0-99999                                    | `132`                 |
 | `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
 | `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
-| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs     | `{"admin":[1234,1267]}`   |
-| `last_modified`   | `integer`    | Time when last modified | UNIX timestamp                          | `1344571233`          |
-| `tag`             | `string`     | Thread tag           | text                                       | `Loop`                |
+| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs         | `{"admin":[1234,1267]}` |
+| `last_modified` | `integer`      | Time when last modified | UNIX timestamp                          | `1344571233`          |
+| `tag`           | `string`       | Thread tag           | text                                       | `Loop`                |
+| `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs when true)  
@@ -120,8 +123,9 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `bumplimit` (only displays on OPs when true)  
 `imagelimit` (only displays on OPs when true)  
 `capcode_replies` (only displays on /q/ when there are capcode user replies)  
-`last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)
-`tag` (only displays on /f/)
+`last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)  
+`tag` (only displays on /f/)  
+`semantic_url` (only displays on OPs)
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
@@ -132,13 +136,13 @@ If there are no custom spoilers already in a thread, you can just random whateve
 ### Where are the files? ###
 
 Boards: http(s)://boards.4chan.org/`board`/  
-Indexes: http(s)://boards.4chan.org/`board`/`[1-10]` (# of pages varies per board, directory root is page 0)  
+Indexes: http(s)://boards.4chan.org/`board`/`[1-10]` (# of pages varies per board, directory root is page 1)  
 
-Threads: http(s)://boards.4chan.org/`board`/res/`resto`  
-Replies: http(s)://boards.4chan.org/`board`/res/`resto`#p`no`  
+Threads: http(s)://boards.4chan.org/`board`/thread/`resto`  
+Replies: http(s)://boards.4chan.org/`board`/thread/`resto`#p`no`  
 
-Images: http(s)://i.4cdn.org/`board`/src/`tim`.`ext`  
-Thumbnails: http(s)://t.4cdn.org/`board`/thumb/`tim`s.jpg  
+Images: http(s)://i.4cdn.org/`board`/`tim`.`ext`  
+Thumbnails: http(s)://t.4cdn.org/`board`/`tim`s.jpg  
 
 Spoiler image: http(s)://s.4cdn.org/image/spoiler.png  
 Custom spoilers: http(s)://s.4cdn.org/image/spoiler-`board``custom_spoiler`.png  
