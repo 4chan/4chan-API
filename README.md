@@ -93,7 +93,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs         | `{"admin":[1234,1267]}` |
 | `last_modified` | `integer`      | Time when last modified | UNIX timestamp                          | `1344571233`          |
 | `tag`           | `string`       | Thread tag           | text                                       | `Loop`                |
-| `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread |
+| `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread` |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` (only displays on OPs when true)  
