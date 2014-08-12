@@ -28,7 +28,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated April 19, 2014.*
+*This guide was last updated August 12, 2014.*
 
 ### API Rules ###
 
