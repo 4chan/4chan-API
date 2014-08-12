@@ -3,7 +3,7 @@
 
 ## Welcome ##
 
-Welcome to 4chan's poorly documented read-only JSON API guide!
+Welcome to 4chan's read-only JSON API documentation.
 
 JSON representations of threads and indexes are exposed at the following URLs:
 
@@ -52,9 +52,10 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | **attribute**   | **value**      | **description**      | **possible values**                        | **example value**     |
 |:----------------|:---------------|:---------------------|:-------------------------------------------|:----------------------|
 | `no`            | `integer`      | Post number          | 1-9999999999999                            | `9001`                |
-| `resto`         | `integer`      | Reply to             | 0 (is thread), 1-9999999999999             | `0`                   |
+| `resto`         | `integer`      | Reply to             | 0 (is a thread OP), 1-9999999999999        | `0`                   |
 | `sticky`        | `integer`      | Stickied thread?     | 0 (no), 1 (yes)                            | `1`                   |
-| `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `0`                   |
+| `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `1`                   |
+| `archived`      | `integer`      | Archived thread?     | 0 (no), 1 (yes)                            | `1`                   |
 | `now`           | `string`       | Date and time        | MM\/DD\/YY(Day)HH:MM (:SS on some boards), EST/EDT timezone  | `08\/08\/12(Wed)01:11`|
 | `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          |
 | `name`          | `string`       | Name                 | text                                       | `moot`                |
@@ -63,7 +64,6 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, developer | `admin`             |
 | `country`       | `string`       | Country code         | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
 | `country_name`  | `string`       | Country name         | text                                       | `Unknown`             |
-| `email`         | `string`       | Email                | text                                       | `moot@4chan.org`      |
 | `sub`           | `string`       | Subject              | text                                       | `This is a subject`   |
 | `com`           | `string`       | Comment              | text (includes escaped HTML)               | `This is a comment`   |
 | `tim`           | `integer`      | Renamed filename     | UNIX timestamp + microseconds              | `1344402680740`       |
@@ -90,11 +90,10 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread` |
 
 **Note the following attributes are optional:**  
-`sticky` `closed` (only displays on OPs when true)  
+`sticky` `closed` `archived` (only displays on OPs when true)  
 `id` (only displays when board has DISPLAY_ID set)  
 `name` (only displays if name is present, which is always unless there is a blank name and tripcode)  
 `trip` (only displays if tripcode is present)  
-`email` (only displays if email is present)  
 `sub` (only displays if subject is present)  
 `com` (only displays if comment is present)  
 `capcode` (only displays when using a capcode)  
