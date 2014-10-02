@@ -66,10 +66,10 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `country_name`  | `string`       | Country name         | text                                       | `Unknown`             |
 | `sub`           | `string`       | Subject              | text                                       | `This is a subject`   |
 | `com`           | `string`       | Comment              | text (includes escaped HTML)               | `This is a comment`   |
-| `tim`           | `integer`      | Renamed filename     | UNIX timestamp + microseconds              | `1344402680740`       |
+| `tim`           | `integer`      | Renamed filename     | UNIX timestamp + milliseconds              | `1344402680740`       |
 | `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
 | `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf, .webm        | `.jpg`                |
-| `fsize`         | `integer`      | File size            | 1-8388608                                  | `2500`                |
+| `fsize`         | `integer`      | File size            | 0-10485760                                 | `2500`                |
 | `md5`           | `string`       | File MD5             | text (24 character, packed base64 MD5 hash)| `NOetrLVnES3jUn1x5ZPVAg==` |
 | `w`             | `integer`      | Image width          | 1-10000                                    | `500`                 |
 | `h`             | `integer`      | Image height         | 1-10000                                    | `500`                 |
