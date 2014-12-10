@@ -14,9 +14,13 @@ A JSON representation of all thread OPs (and the replies shown on indexes) from 
 
 http(s)://a.4cdn.org/`board`/catalog.json
 
-And just the thread IDs, their modification times, and respective pages can be found here:
+A just the thread IDs, their modification times, and respective pages can be found here:
 
 http(s)://a.4cdn.org/`board`/threads.json
+
+A list of archived thread IDs can be found here:
+
+http(s)://a.4cdn.org/`board`/archived.json
 
 A list of boards is exposed at the following URL:
 
@@ -28,7 +32,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated August 12, 2014.*
+*This guide was last updated December 10, 2014.*
 
 ### API Rules ###
 
