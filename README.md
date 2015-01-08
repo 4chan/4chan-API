@@ -20,7 +20,7 @@ http(s)://a.4cdn.org/`board`/threads.json
 
 A list of archived thread IDs can be found here:
 
-http(s)://a.4cdn.org/`board`/archived.json
+http(s)://a.4cdn.org/`board`/archive.json
 
 A list of boards is exposed at the following URL:
 
