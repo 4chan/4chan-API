@@ -14,7 +14,7 @@ A JSON representation of all thread OPs (and the replies shown on indexes) from 
 
 http(s)://a.4cdn.org/`board`/catalog.json
 
-A list of just the thread IDs, their modification times, and respective pages can be found here:
+A list of thread IDs, their modification times, and respective pages can be found here:
 
 http(s)://a.4cdn.org/`board`/threads.json
 
