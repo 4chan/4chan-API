@@ -14,7 +14,7 @@ A JSON representation of all thread OPs (and the replies shown on indexes) from 
 
 http(s)://a.4cdn.org/`board`/catalog.json
 
-A just the thread IDs, their modification times, and respective pages can be found here:
+A list of just the thread IDs, their modification times, and respective pages can be found here:
 
 http(s)://a.4cdn.org/`board`/threads.json
 
@@ -125,9 +125,9 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `semantic_url` (only displays on OPs)
 
 **Note about custom spoilers:**  
-`custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4. 
-For our imageboard pages, the custom spoiler images changes every time a new post is made. If you are writing a browser add-on with auto-update 
-functionality, you should first check the HTML to see if a custom spoiler has been posted, and use the same number, so when new spoiler posts come in, they match the pre-existing ones. 
+`custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4.
+For our imageboard pages, the custom spoiler images changes every time a new post is made. If you are writing a browser add-on with auto-update
+functionality, you should first check the HTML to see if a custom spoiler has been posted, and use the same number, so when new spoiler posts come in, they match the pre-existing ones.
 If there are no custom spoilers already in a thread, you can just random whatever you'd like, since there is no need to match pre-existing ones.
 
 ### Where are the files? ###
