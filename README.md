@@ -32,7 +32,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated December 10, 2014.*
+*This guide was last updated May 11, 2015.*
 
 ### API Rules ###
 
@@ -92,6 +92,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `last_modified` | `integer`      | Time when last modified | UNIX timestamp                          | `1344571233`          |
 | `tag`           | `string`       | Thread tag           | text                                       | `Loop`                |
 | `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread` |
+| `unique_ips`    | `integer`      | Number of unique ips | 1-9999999999999                            | `1`                   |
 
 **Note the following attributes are optional:**  
 `sticky` `closed` `archived` (only displays on OPs when true)  
