@@ -60,6 +60,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `sticky`        | `integer`      | Stickied thread?     | 0 (no), 1 (yes)                            | `1`                   |
 | `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `1`                   |
 | `archived`      | `integer`      | Archived thread?     | 0 (no), 1 (yes)                            | `1`                   |
+| `archived_on`      | `integer`      | Time when archived     | UNIX timestamp                            | `1344571233`                   |
 | `now`           | `string`       | Date and time        | MM\/DD\/YY(Day)HH:MM (:SS on some boards), EST/EDT timezone  | `08\/08\/12(Wed)01:11`|
 | `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          |
 | `name`          | `string`       | Name                 | text                                       | `moot`                |
