@@ -65,7 +65,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `name`          | `string`       | Name                 | text                                       | `moot`                |
 | `trip`          | `string`       | Tripcode             | text (format: !tripcode!!securetripcode)   | `!Ep8pui8Vw2`         |
 | `id`            | `string`       | ID                   | text (8 characters), Mod, Admin, Developer, Founder | `Admin`               |
-| `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, developer, founder | `admin`             |
+| `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, manager, developer, founder | `admin`             |
 | `country`       | `string`       | Country code         | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
 | `country_name`  | `string`       | Country name         | text                                       | `Unknown`             |
 | `sub`           | `string`       | Subject              | text                                       | `This is a subject`   |
