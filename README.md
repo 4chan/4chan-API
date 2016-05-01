@@ -65,7 +65,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          |
 | `name`          | `string`       | Name                 | text                                       | `moot`                |
 | `trip`          | `string`       | Tripcode             | text (format: !tripcode!!securetripcode)   | `!Ep8pui8Vw2`         |
-| `id`            | `string`       | ID                   | text (8 characters), Mod, Admin, Developer, Founder | `Admin`               |
+| `id`            | `string`       | ID                   | text (8 characters), Mod, Admin, Manager, Developer, Founder | `Admin`               |
 | `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, manager, developer, founder | `admin`             |
 | `country`       | `string`       | Country code         | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
 | `country_name`  | `string`       | Country name         | text                                       | `Unknown`             |
@@ -149,6 +149,7 @@ Closed thread icon: http(s)://s.4cdn.org/image/closed.gif
 Sticky thread icon: http(s)://s.4cdn.org/image/sticky.gif  
 Admin capcode icon: http(s)://s.4cdn.org/image/adminicon.gif  
 Mod capcode icon: http(s)://s.4cdn.org/image/modicon.gif  
+Manager capcode icon: http(s)://s.4cdn.org/image/managericon.gif  
 Developer capcode icon: http(s)://s.4cdn.org/image/developericon.gif  
 Founder capcode icon: http(s)://s.4cdn.org/image/foundericon.gif  
 File deleted (for OPs): http(s)://s.4cdn.org/image/filedeleted.gif  
