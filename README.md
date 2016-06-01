@@ -156,7 +156,6 @@ File deleted (for OPs): http(s)://s.4cdn.org/image/filedeleted.gif
 File deleted (for replies): http(s)://s.4cdn.org/image/filedeleted-res.gif  
 
 Country flags: http(s)://s.4cdn.org/image/country/`country`.gif  
-/pol/ country flags: http(s)://s.4cdn.org/image/country/troll/`country`.gif  
 
 ### Examples ###
 
