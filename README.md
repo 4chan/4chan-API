@@ -32,7 +32,7 @@ Supported request methods are: GET, HEAD, OPTIONS
 
 Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
-*This guide was last updated June 1, 2016.*
+*This guide was last updated December 10, 2014.*
 
 ### API Rules ###
 
