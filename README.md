@@ -53,77 +53,46 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
 ### Posts Object ####
 
-| **attribute**   | **value**      | **description**      | **possible values**                        | **example value**     |
-|:----------------|:---------------|:---------------------|:-------------------------------------------|:----------------------|
-| `no`            | `integer`      | Post number          | 1-9999999999999                            | `9001`                |
-| `resto`         | `integer`      | Reply to             | 0 (is a thread OP), 1-9999999999999        | `0`                   |
-| `sticky`        | `integer`      | Stickied thread?     | 0 (no), 1 (yes)                            | `1`                   |
-| `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `1`                   |
-| `archived`      | `integer`      | Archived thread?     | 0 (no), 1 (yes)                            | `1`                   |
-| `archived_on`      | `integer`      | Time when archived     | UNIX timestamp                            | `1344571233`                   |
-| `now`           | `string`       | Date and time        | MM\/DD\/YY(Day)HH:MM (:SS on some boards), EST/EDT timezone  | `08\/08\/12(Wed)01:11`|
-| `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          |
-| `name`          | `string`       | Name                 | text                                       | `moot`                |
-| `trip`          | `string`       | Tripcode             | text (format: !tripcode!!securetripcode)   | `!Ep8pui8Vw2`         |
-| `id`            | `string`       | ID                   | text (8 characters), Mod, Admin, Manager, Developer, Founder | `Admin`               |
-| `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, manager, developer, founder | `admin`             |
-| `country`       | `string`       | Country code         | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       |
-| `country_name`  | `string`       | Country name         | text                                       | `Unknown`             |
-| `sub`           | `string`       | Subject              | text                                       | `This is a subject`   |
-| `com`           | `string`       | Comment              | text (includes escaped HTML)               | `This is a comment`   |
-| `tim`           | `integer`      | Renamed filename     | UNIX timestamp + milliseconds              | `1344402680740`       |
-| `filename`      | `string`       | Original filename    | text                                       | `OPisa`               |
-| `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf, .webm        | `.jpg`                |
-| `fsize`         | `integer`      | File size            | 0-10485760                                 | `2500`                |
-| `md5`           | `string`       | File MD5             | text (24 character, packed base64 MD5 hash)| `NOetrLVnES3jUn1x5ZPVAg==` |
-| `w`             | `integer`      | Image width          | 1-10000                                    | `500`                 |
-| `h`             | `integer`      | Image height         | 1-10000                                    | `500`                 |
-| `tn_w`          | `integer`      | Thumbnail width      | 1-250                                      | `250`                 |
-| `tn_h`          | `integer`      | Thumbnail height     | 1-250                                      | `250`                 |
-| `filedeleted`   | `integer`      | File deleted?        | 0 (no), 1 (yes)                            | `0`                   |
-| `spoiler`       | `integer`      | Spoiler image?       | 0 (no), 1 (yes)                            | `0`                   |
-| `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   |
-| `omitted_posts` | `integer`      | # replies omitted    | 1-10000                                    | `33`                  |
-| `omitted_images`| `integer`      | # image replies omitted | 1-10000                                 | `21`                  |
-| `replies`       | `integer`      | # replies total      | 0-99999                                    | `231`                 |
-| `images`        | `integer`      | # images total       | 0-99999                                    | `132`                 |
-| `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   |
-| `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   |
-| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs         | `{"admin":[1234,1267]}` |
-| `last_modified` | `integer`      | Time when last modified | UNIX timestamp                          | `1344571233`          |
-| `tag`           | `string`       | Thread tag           | text                                       | `Loop`                |
-| `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread` |
-
-**Note the following attributes are optional:**  
-`sticky` `closed` `archived` (only displays on OPs when true)  
-`id` (only displays when board has DISPLAY_ID set)  
-`name` (only displays if name is present, which is always unless there is a blank name and tripcode)  
-`trip` (only displays if tripcode is present)  
-`sub` (only displays if subject is present)  
-`com` (only displays if comment is present)  
-`capcode` (only displays when using a capcode)  
-`country` `country_name` (only displays when board uses country flags)  
-`filename` (only displays when image uploaded)  
-`ext` (only displays when image uploaded)  
-`fsize` (only displays when image uploaded)  
-`md5` (only displays when image uploaded)  
-`w` (only displays when image uploaded)  
-`h` (only displays when image uploaded)  
-`tn_w` (only displays when image uploaded)  
-`tn_h` (only displays when image uploaded)  
-`filedeleted` (only displays when image uploaded)  
-`spoiler` (only displays when image uploaded)  
-`custom_spoiler` (only display on OPs, only displays when board has custom spoiler images)  
-`omitted_posts` (only displays on OPs on index pages)  
-`omitted_images` (only displays on OPs on index pages)  
-`replies` (only displays on OPs)  
-`images` (only displays on OPs)  
-`bumplimit` (only displays on OPs when true)  
-`imagelimit` (only displays on OPs when true)  
-`capcode_replies` (only displays on /q/ when there are capcode user replies)  
-`last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)  
-`tag` (only displays on /f/)  
-`semantic_url` (only displays on OPs)
+| **attribute**   | **value**      | **description**      | **possible values**                        | **example value**     | **required**   |
+|:----------------|:---------------|:---------------------|:-------------------------------------------|:----------------------|:---------------|
+| `no`            | `integer`      | Post number          | 1-9999999999999                            | `9001`                | **Yes**        |
+| `resto`         | `integer`      | Reply to             | 0 (is a thread OP), 1-9999999999999        | `0`                   | **Yes**            |
+| `sticky`        | `integer`      | Stickied thread?     | 0 (no), 1 (yes)                            | `1`                   | **No** (only displays on OPs when true) |
+| `closed`        | `integer`      | Closed thread?       | 0 (no), 1 (yes)                            | `1`                   | **No** (only displays on OPs when true) |
+| `archived`      | `integer`      | Archived thread?     | 0 (no), 1 (yes)                            | `1`                   | **No** (only displays on OPs when true) |
+| `archived_on`   | `integer`      | Time when archived   | UNIX timestamp                             | `1344571233`          | **Yes**            |
+| `now`           | `string`       | Date and time        | MM\/DD\/YY(Day)HH:MM (:SS on some boards), EST/EDT timezone  | `08\/08\/12(Wed)01:11`| **Yes** |
+| `time`          | `integer`      | UNIX timestamp       | UNIX timestamp                             | `1344570123`          | **Yes**            |
+| `name`          | `string`       | Name                 | text                                       | `moot`                | **No** (only displays if name is present, which is always unless there is a blank name and tripcode) |
+| `trip`          | `string`       | Tripcode             | text (format: !tripcode!!securetripcode)   | `!Ep8pui8Vw2`         | **No** (only displays if tripcode is present) |
+| `id`            | `string`       | ID                   | text (8 characters), Mod, Admin, Manager, Developer, Founder       | `Admin`  | **No** (only displays when board has DISPLAY_ID set) |
+| `capcode`       | `string`       | Capcode              | none, mod, admin, admin_highlight, manager, developer, founder     | `admin`  | **No** (only displays when using a capcode) |
+| `country`       | `string`       | Country code         | text (2 characters, ISO 3166-1 alpha-2), XX (unknown) | `XX`       | **No** (only displays when board uses country flags) |
+| `country_name`  | `string`       | Country name         | text                                       | `Unknown`             | **No** (only displays when board uses country flags) |
+| `sub`           | `string`       | Subject              | text                                       | `This is a subject`   | **No** (only displays if subject is present) |
+| `com`           | `string`       | Comment              | text (includes escaped HTML)               | `This is a comment`   | **No** (only displays if comment is present) |
+| `tim`           | `integer`      | Renamed filename     | UNIX timestamp + milliseconds              | `1344402680740`       | **Yes**            |
+| `filename`      | `string`       | Original filename    | text                                       | `OPisa`               | **No** (only displays when image uploaded) |
+| `ext`           | `string`       | File extension       | .jpg, .png, .gif, .pdf, .swf, .webm        | `.jpg`                | **No** (only displays when image uploaded) |
+| `fsize`         | `integer`      | File size            | 0-10485760                                 | `2500`                | **No** (only displays when image uploaded) |
+| `md5`           | `string`       | File MD5             | text (24 character, packed base64 MD5 hash)| `NOetrLVnES3jUn1x5ZPVAg==` | **No** (only displays when image uploaded) |
+| `w`             | `integer`      | Image width          | 1-10000                                    | `500`                 | **No** (only displays when image uploaded) |
+| `h`             | `integer`      | Image height         | 1-10000                                    | `500`                 | **No** (only displays when image uploaded) |
+| `tn_w`          | `integer`      | Thumbnail width      | 1-250                                      | `250`                 | **No** (only displays when image uploaded) |
+| `tn_h`          | `integer`      | Thumbnail height     | 1-250                                      | `250`                 | **No** (only displays when image uploaded) |
+| `filedeleted`   | `integer`      | File deleted?        | 0 (no), 1 (yes)                            | `0`                   | **No** (only displays when image uploaded) |
+| `spoiler`       | `integer`      | Spoiler image?       | 0 (no), 1 (yes)                            | `0`                   | **No** (only displays when image uploaded) |
+| `custom_spoiler`| `integer`      | Custom spoilers?     | 1-99                                       | `3`                   | **No** (only display on OPs, only displays when board has custom spoiler images) |
+| `omitted_posts` | `integer`      | # replies omitted    | 1-10000                                    | `33`                  | **No** (only displays on OPs on index pages) |
+| `omitted_images`| `integer`      | # image replies omitted | 1-10000                                 | `21`                  | **No** (only displays on OPs on index pages) |
+| `replies`       | `integer`      | # replies total      | 0-99999                                    | `231`                 | **No** (only displays on OPs) |
+| `images`        | `integer`      | # images total       | 0-99999                                    | `132`                 | **No** (only displays on OPs) |
+| `bumplimit`     | `integer`      | Bump limit met?      | 0 (no), 1 (yes)                            | `0`                   | **No** (only displays on OPs when true) |
+| `imagelimit`    | `integer`      | Image limit met?     | 0 (no), 1 (yes)                            | `1`                   | **No** (only displays on OPs when true) |
+| `capcode_replies` | `array`      | Capcode user replies?| array of capcode type and post IDs         | `{"admin":[1234,1267]}` | **No** (only displays on /q/ when there are capcode user replies) |
+| `last_modified` | `integer`      | Time when last modified | UNIX timestamp                          | `1344571233`          | **No** (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes) |
+| `tag`           | `string`       | Thread tag           | text                                       | `Loop`                | **No** (only displays on /f/) |
+| `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread` | **No** (only displays on OPs) |
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4.
