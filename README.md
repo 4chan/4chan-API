@@ -134,7 +134,7 @@ If there are no custom spoilers already in a thread, you can just random whateve
 ### Where are the files? ###
 
 Boards: http(s)://boards.4chan.org/`board`/  
-Indexes: http(s)://boards.4chan.org/`board`/`[1-10]` (# of pages varies per board, directory root is page 1)  
+Indexes: http(s)://boards.4chan.org/`board`/`[2-10]` (# of pages varies per board, omit number for directory root)  
 
 Threads: http(s)://boards.4chan.org/`board`/thread/`resto`  
 Replies: http(s)://boards.4chan.org/`board`/thread/`resto`#p`no`  
