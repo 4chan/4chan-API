@@ -93,6 +93,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 | `last_modified` | `integer`      | Time when last modified | UNIX timestamp                          | `1344571233`          |
 | `tag`           | `string`       | Thread tag           | text                                       | `Loop`                |
 | `semantic_url`  | `string`       | Thread URL slug      | text                                       | `daily-programming-thread` |
+| `since4pass`    | `integer`      | Year 4chan Pass bought | 4 digit year (YYYY)                      | `2016`                |
+
 
 **Note the following attributes are optional:**  
 `sticky` `closed` `archived` (only displays on OPs when true)  
@@ -123,7 +125,8 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 `capcode_replies` (only displays on /q/ when there are capcode user replies)  
 `last_modified` (only displayed in threads.json, and includes replies, deletions, and sticky/closed changes)  
 `tag` (only displays on /f/)  
-`semantic_url` (only displays on OPs)
+`semantic_url` (only displays on OPs)  
+`since4pass` (only when 4chan Pass owner enters _since4pass_ into Options field)  
 
 **Note about custom spoilers:**  
 `custom_spoiler` describes the number of custom spoilers that exist for the specified board. If the number is `4`, it means that you can choose anywhere from 1 to 4.
