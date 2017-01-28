@@ -98,7 +98,7 @@ Questions? Please e-mail [api@4chan.org](mailto:api@4chan.org).
 
 **Note the following attributes are optional:**  
 `sticky` `closed` `archived` (only displays on OPs when true)  
-`archived_on` (only displays on OPs when true)  
+`archived_on` (only displays on OPs when `archived` is true)  
 `id` (only displays when board has DISPLAY_ID set)  
 `name` (only displays if name is present, which is always unless there is a blank name and tripcode)  
 `trip` (only displays if tripcode is present)  
