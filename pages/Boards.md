@@ -6,7 +6,7 @@
 The `boards.json` file is a comprehensive list of all boards and their major settings. The `boards.json` file also contains a list of all meme flags available on boards where `troll_flags` is enabled.
 
 
-## Archive JSON Structure ##
+## Boards.json Attributes ##
 
 | **Attribute**   | **Type**       | **Appears**                | **Description** | **Possible values**|
 |:----------------|:---------------|:---------------------------|:----------------|:-------------------|
