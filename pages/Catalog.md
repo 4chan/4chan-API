@@ -12,41 +12,43 @@ The `catalog.json` file is a comprehensive list of all threads+attributes on a b
 |:----------------|:---------------|:---------------------------|:----------------|:-------------------|
 | `no`            | `integer`      | `always` | The numeric post ID | `any positive integer` | 
 | `resto`         | `integer`      | `always` | For replies: this is the ID of the thread being replied to. For OP: this value is zero   | `0` or `Any positive integer`|
-| `sticky`        | `integer`      | `OP only` | If the thread is being pinned to the top of the page| `1` or not set|
-| `closed`        | `integer`      | `only in OP, if thread is closed` | If the thread is closed to replies | `1` or not set|
-| `now`           | `string`       | `always` | String date and time, EST timezone | `string` |
+| `sticky`        | `integer`      | `OP only, if thread is currently stickied` | If the thread is being pinned to the top of the page| `1` or not set|
+| `closed`        | `integer`      | `OP only, if thread is currently closed` | If the thread is closed to replies | `1` or not set|
+| `now`           | `string`       | `always` | MM/DD/YY(Day)HH:MM (:SS on some boards), EST/EDT timezone | `string` |
 | `time`          | `integer`      | `always` | UNIX timestamp the post was created |  `UNIX timestamp` |
 | `name`          | `string`       | `always` | Name user posted with. Defaults to `Anonymous` | `any string` |
-| `trip`          | `string`       | `if post has tripcode` |  | |
-| `id`            | `string`       | `if post has ID` | | |
-| `capcode`       | `string`       | `if post has capcode` | | |
-| `country`       | `string`       | `if country flags are enabled` | | |
-| `country_name`  | `string`       | `if country flags are enabled`| | |
-| `sub`           | `string`       | `OP only`| | |
-| `com`           | `string`       | `always` | | |
-| `tim`           | `integer`      | `if post has attachment` |  | |
-| `filename`      | `string`       | `if post has attachment` | | |
-| `ext`           | `string`       | `if post has attachment` | | |
-| `fsize`         | `integer`      | `if post has attachment` | | |
-| `md5`           | `string`       | `if post has attachment` | | |
-| `w`             | `integer`      | `if post has attachment` |  | |
-| `h`             | `integer`      | `if post has attachment` |  | |
-| `tn_w`          | `integer`      | `if post has attachment` |  | |
-| `tn_h`          | `integer`      | `if post has attachment` |  | |
-| `filedeleted`   | `integer`      | `if post has attachment and attachment is deleted` | | |
-| `spoiler`       | `integer`      | `if post has attachment and attachment is spoilered` |  | |
-| `custom_spoiler`| `integer`      | `if post has attachment and attachment is spoilered` |  | |
-| `omitted_posts` | `integer`      | `OP only` |  | |
-| `omitted_images`| `integer`      | `OP only` |  | |
-| `replies`       | `integer`      | `OP only` | | |
-| `images`        | `integer`      | `OP only` | | |
-| `bumplimit`     | `integer`      | `OP only` |  | |
-| `imagelimit`    | `integer`      | `OP only` |  | |
-| `last_modified` | `integer`      | `OP only` |  | |
-| `tag`           | `string`       | `OP only`, `/f/ only` |  | |
-| `semantic_url`  | `string`       |  `OP only` |  | |
-| `since4pass`    | `integer`      | `conditionally` |  | |
-
+| `trip`          | `string`       | `if post has tripcode` | The user's tripcode, in format: `!tripcode` or `!!securetripcode`| `any string` |
+| `id`            | `string`       | `if post has ID` | The poster's ID | `any 8 characters` |
+| `capcode`       | `string`       | `if post has capcode` | The capcode identifier for a post | Not set, `mod`, `admin`, `admin_highlight`, `manager`, `developer`, `founder` |
+| `country`       | `string`       | `if country flags are enabled` | Poster's [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | `2 character string` or `XX` if unknown |
+| `country_name`  | `string`       | `if country flags are enabled`| Poster's country name | `Name of any country` |
+| `sub`           | `string`       | `OP only, if subject was included`| OP Subject text | `any string` |
+| `com`           | `string`       | `if comment was included` | Comment (HTML escaped) | `any HTML escaped string` |
+| `tim`           | `integer`      | `always if post has attachment` | Unix timestamp + microtime that an image was uploaded | `integer` |
+| `filename`      | `string`       | `always if post has attachment` | Filename as it appeared on the poster's device | `any string` |
+| `ext`           | `string`       | `always if post has attachment` | Filetype | `.jpg`, `.png`, `.gif`, `.pdf`, `.swf`, `.webm` |
+| `fsize`         | `integer`      | `always if post has attachment` | Size of uploaded file in bytes | `any integer` |
+| `md5`           | `string`       | `always if post has attachment` | 24 character, packed base64 MD5 hash of file |  |
+| `w`             | `integer`      | `always if post has attachment` | Image width dimension | `any integer` |
+| `h`             | `integer`      | `always if post has attachment` | Image height dimension | `any integer` |
+| `tn_w`          | `integer`      | `always if post has attachment` | Thumbnail image width dimension | `any integer` |
+| `tn_h`          | `integer`      | `always if post has attachment` | Thumbnail image height dimension | `any integer` |
+| `filedeleted`   | `integer`      | `if post had attachment and attachment is deleted` | If the file was deleted from the post | `1` or not set |
+| `spoiler`       | `integer`      | `if post has attachment and attachment is spoilered` | If the image was spoilered or not | `1` or not set |
+| `custom_spoiler`| `integer`      | `if post has attachment and attachment is spoilered` | The custom spoiler ID for a spoilered image | `1-10` or not set |
+| `omitted_posts` | `integer`      | `OP only` | Number of replies minus the number of previewed replies | `any integer` |
+| `omitted_images`| `integer`      | `OP only` | Number of image replies minus the number of previewed image replies | `any integer` |
+| `replies`       | `integer`      | `OP only` | Total number of replies to a thread | `any integer` |
+| `images`        | `integer`      | `OP only` | Total number of image replies to a thread | `any integer` |
+| `bumplimit`     | `integer`      | `OP only, only if bump limit has been reached` | If a thread has reached bumplimit, it will no longer bump | `1` or not set |
+| `imagelimit`    | `integer`      | `OP only, only if image limit has been reached` | If an image has reached image limit, no more image replies can be made  | `1` or not set |
+| `last_modified` | `integer`      | `OP only` | The UNIX timestamp marking the last time a post was added to or removed from a thread | `UNIX Timestamp` |
+| `tag`           | `string`       | `OP only`, `/f/ only` | The category of `.swf` upload |`Game`, `Loop`, etc..|
+| `semantic_url`  | `string`       |  `OP only` | SEO URL slug for thread | `string` |
+| `since4pass`    | `integer`      | `if poster put 'since4pass' in the options field` | Year 4chan pass bought | `any 4 digit year`|
+| `unique_ips`    | `integer`      | `OP only` | Number of unique posters in a thread  | `any integer` | 
+| `m_img`         | `integer`      | `any post that has a mobile-optimized image` | Mobile optimized image exists for post | `1` or not set |
+| `last_replies`  | `array` | `catalog OP only` | JSON representation of the most recent replies to a thread | `array of JSON post objects` |
 
 ## Example file ##
 
