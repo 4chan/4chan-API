@@ -1,12 +1,12 @@
-## boards.json ##
+## catalog.json ##
 | **Example url** | [`https://a.4cdn.org/boards.json`](https://a.4cdn.org/boards.json) | 
 |:----------------|:-------------------------------------|
 | **Status 200**  | Content-Type: application/json |
 
-The `boards.json` file is a comprehensive list of all boards and their major settings. The `boards.json` file also contains a list of all meme flags available on boards where `troll_flags` is enabled.
+The `catalog.json` file is a comprehensive list of all threads+attributes on a board. Every thread is grouped by `page`. This file is a JSON representation of a board catalog page (example: [https://boards.4channel.org/po/catalog](https://boards.4channel.org/po/catalog).
 
 
-## Archive JSON Structure ##
+## Catalog JSON Attributes ##
 
 | **Attribute**   | **Type**       | **Appears**                | **Description** | **Possible values**|
 |:----------------|:---------------|:---------------------------|:----------------|:-------------------|
