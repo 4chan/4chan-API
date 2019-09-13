@@ -11,7 +11,7 @@
 
 
 ## API Endpoints
-All the endpoints that make up the 4chan API
+All the endpoints that make up the 4chan API. No additional GET parameters are accepted with any of these routes.
 
 | **File name**   | **Description**      | **Documentation page**      | **URL example** |
 |:----------------|:---------------------|:-------------------------------|:---------------- |
@@ -20,5 +20,5 @@ All the endpoints that make up the 4chan API
 |`catalog.json` | A JSON representation of a board [catalog](https://boards.4channel.org/catalog). Includes all OPs and their preview replies. | [Catalog](Catalog.md) | [https://a.4cdn.org/po/catalog.json](https://a.4cdn.org/po/catalog.json) |
 |`archive.json` | A list of all closed threads in a board archive. Archived threads no longer receive posts. | [Archive](Archive.md) | [https://a.4cdn.org/po/archive.json](https://a.4cdn.org/po/archive.json) |
 | `/<board>/<page#>.json` | A list of threads and their preview replies from a specified index page. Index pages start at `1`. The maximum number of pages (can be found in `boards.json`) may vary depending on the board. | [Indexes](Indexes.md) | [https://a.4cdn.org/po/3.json](https://a.4cdn.org/po/3.json) |
-|`/<board>/thread/<OP #>.json`| A list of all posts in a specific thread. | [Threads](Threads.md) | [https://a.4cdn.org/po/thread/570368.json](https://a.4cdn.org/po/thread/570368.json) | 
+|`/<board>/thread/<OP #>.json`| A full list of posts in a single thread. | [Threads](Threads.md) | [https://a.4cdn.org/po/thread/570368.json](https://a.4cdn.org/po/thread/570368.json) | 
 
