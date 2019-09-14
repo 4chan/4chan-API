@@ -6,7 +6,6 @@
 |:-------------|:-------------------|:----------------------------|:---------------------|
 | `a.4cdn.org` | `https`, `http`    | `4chan.org`, `4channel.org` | This domain serves all 4chan API endpoints in the form of static json files. |
 | `i.4cdn.org` | `https`, `http`    | `4chan.org`, `4channel.org` | This is the primary content domain used for serving user submitted media attached to posts. |
-| `is2.4cdn.org` | `https`, `http`  | `4chan.org`, `4channel.org` | Acts as the secondary content domain used for serving user submitted media attached to posts. |
 | `s.4cdn.org` | `https`, `http`    | `4chan.org`, `4channel.org` | Serves all static site content including icons, banners, CSS and JavaScript files.  |
 
 
