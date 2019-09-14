@@ -110,8 +110,7 @@
         "md5": "vKWr7+oITdUBu7bUaypuCw==",
         "fsize": 163110,
         "resto": 570368,
-        "capcode": "mod",
-        "xa19l": 2
+        "capcode": "mod"
     }]
 }
 ```
