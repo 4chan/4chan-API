@@ -14,7 +14,7 @@ The `s` after the image ID indicates the file is a thumbnail.
 
 **Spoiler image**: `https://s.4cdn.org/image/spoiler.png`
 
-**Custom spoilers**: `https://s.4cdn.org/image/spoiler-[board][1-5]`.png
+**Custom spoilers**: `https://s.4cdn.org/image/spoiler-[board][1-5].png`
 
 **Note about custom spoilers:** 
 Different boards can have different numbers of potential custom spoilers. For boards with custom spoilers enabled, a custom spoiler thumbnail is randomly assigned to each spoilered image on a page every time a new post is made and the page is refreshed.
@@ -23,7 +23,7 @@ Different boards can have different numbers of potential custom spoilers. For bo
 | **Icon** | **Description** | **Location**|
 |:---------|:----------------|:------------|
 |![closed](https://s.4cdn.org/image/closed.gif)|Thread closed or archived| https://s.4cdn.org/image/closed.gif   |
-|![closed](https://s.4cdn.org/image/sticky.gif)|Thread closed or archived| https://s.4cdn.org/image/sticky.gif   |
+|![closed](https://s.4cdn.org/image/sticky.gif)|Thread will remain at top of board| https://s.4cdn.org/image/sticky.gif   |
 |![closed](https://s.4cdn.org/image/adminicon.gif)|Admin capcode verification| https://s.4cdn.org/image/adminicon.gif   |
 |![closed](https://s.4cdn.org/image/modicon.gif)|Moderator capcode verification| https://s.4cdn.org/image/modicon.gif   |
 |![closed](https://s.4cdn.org/image/developericon.gif)|Developer capcode verification| https://s.4cdn.org/image/developericon.gif   |
