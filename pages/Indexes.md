@@ -9,8 +9,6 @@
 
 | **Attribute**   | **Type**       | **Appears**                | **Description** | **Possible values**|
 |:----------------|:---------------|:---------------------------|:----------------|:-------------------|
-| **Attribute**   | **Type**       | **Appears**                | **Description** | **Possible values**|
-|:----------------|:---------------|:---------------------------|:----------------|:-------------------|
 | `no`            | `integer`      | `always` | The numeric post ID | `any positive integer` | 
 | `resto`         | `integer`      | `always` | For replies: this is the ID of the thread being replied to. For OP: this value is zero   | `0` or `Any positive integer`|
 | `sticky`        | `integer`      | `OP only, if thread is currently stickied` | If the thread is being pinned to the top of the page| `1` or not set|
