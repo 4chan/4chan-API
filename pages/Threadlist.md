@@ -6,7 +6,7 @@
 The `threads.json` file is a comprehensive list of all threads that contains:
  - The thread OP number
  - The index page the thread is currently on
- - A [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) marking the last time a post was removed **or** added to the thread was last updated
+ - A [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) marking the last time the thread was updated; this could be a new post, a post deletion, a post image deletion, a post moderation text edit, or a thread-level settings modification (closed/sticky toggle)
  - The number of replies a thread has
 
 
@@ -17,7 +17,7 @@ The `threads.json` file is a comprehensive list of all threads that contains:
 | `page`          | `integer`      | `always` | The page number that the following `threads` array is on | `Any positive integer` |
 | `threads`       | `array`        | `always` | The array of thread objects | `array of objects`|
 | `no`            | `integer`      | `always` | The OP ID of a thread | `Any positive integer` |
-| `last_modified` | `integer` (Unix timestamp)| `always` | The UNIX timestamp when a post was last added or deleted from the thread | `UNIX Timestamp` |
+| `last_modified` | `integer`      | `always` | The UNIX timestamp marking the last time the thread was modified (post added/modified/deleted, thread closed/sticky settings modified) | `UNIX Timestamp` |
 | `replies`       | `integer`      | `always` | A numeric count of the number of replies in the thread | `Any positive integer` |
 
 * integer 1 = (on) or 0 (off)
