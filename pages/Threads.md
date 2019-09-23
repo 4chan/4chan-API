@@ -46,6 +46,8 @@
 | `since4pass`    | `integer`      | `if poster put 'since4pass' in the options field` | Year 4chan pass bought | `any 4 digit year`|
 | `unique_ips`    | `integer`      | `OP only` | Number of unique posters in a thread  | `any integer` | 
 | `m_img`         | `integer`      | `any post that has a mobile-optimized image` | Mobile optimized image exists for post | `1` or not set |
+| `archived`      | `integer`      | `OP only, if thread has been archived` | Thread has reached the board's archive | `1` or not set |
+| `archived_on`   | `integer`      | `OP only, if thread has been archived` | UNIX timestamp the post was archived | `UNIX timestamp` |
 
 
 
