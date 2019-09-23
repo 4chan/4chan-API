@@ -6,7 +6,7 @@
 The `threads.json` file is a comprehensive list of all threads that contains:
  - The thread OP number
  - The index page the thread is currently on
- - A [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) marking the last time the thread was updated; this could be a new post, a post deletion, a post image deletion, a post moderation text edit, or a thread-level settings modification (closed/sticky toggle)
+ - A [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) marking the last time the thread was modified
  - The number of replies a thread has
 
 
