@@ -42,7 +42,7 @@ The `catalog.json` file is a comprehensive list of all threads+attributes on a b
 | `images`        | `integer`      | `OP only` | Total number of image replies to a thread | `any integer` |
 | `bumplimit`     | `integer`      | `OP only, only if bump limit has been reached` | If a thread has reached bumplimit, it will no longer bump | `1` or not set |
 | `imagelimit`    | `integer`      | `OP only, only if image limit has been reached` | If an image has reached image limit, no more image replies can be made  | `1` or not set |
-| `last_modified` | `integer`      | `OP only` | The UNIX timestamp marking the last time a post was added to or removed from a thread | `UNIX Timestamp` |
+| `last_modified` | `integer`      | `OP only` | The UNIX timestamp marking the last time the thread was modified (post added/modified/deleted, thread closed/sticky settings modified) | `UNIX Timestamp` |
 | `tag`           | `string`       | `OP only`, `/f/ only` | The category of `.swf` upload |`Game`, `Loop`, etc..|
 | `semantic_url`  | `string`       |  `OP only` | SEO URL slug for thread | `string` |
 | `since4pass`    | `integer`      | `if poster put 'since4pass' in the options field` | Year 4chan pass bought | `any 4 digit year`|
