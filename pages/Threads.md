@@ -10,7 +10,7 @@
 | **Attribute**   | **Type**       | **Appears**                | **Description** | **Possible values**|
 |:----------------|:---------------|:---------------------------|:----------------|:-------------------|
 | `no`            | `integer`      | `always` | The numeric post ID | `any positive integer` | 
-| `resto`         | `integer`      | `always` | For replies: this is the ID of the thread being replied to. For OP: this value is zero   | `0` or `Any positive integer`|
+| `resto`         | `integer`      | `always` | For replies: this is the ID of the thread being replied to. For OP: this value is zero   | `0` or `any positive integer`|
 | `sticky`        | `integer`      | `OP only, if thread is currently stickied` | If the thread is being pinned to the top of the page| `1` or not set|
 | `closed`        | `integer`      | `OP only, if thread is currently closed` | If the thread is closed to replies | `1` or not set|
 | `now`           | `string`       | `always` | MM/DD/YY(Day)HH:MM (:SS on some boards), EST/EDT timezone | `string` |
@@ -35,16 +35,16 @@
 | `filedeleted`   | `integer`      | `if post had attachment and attachment is deleted` | If the file was deleted from the post | `1` or not set |
 | `spoiler`       | `integer`      | `if post has attachment and attachment is spoilered` | If the image was spoilered or not | `1` or not set |
 | `custom_spoiler`| `integer`      | `if post has attachment and attachment is spoilered` | The custom spoiler ID for a spoilered image | `1-10` or not set |
-| `omitted_posts` | `integer`      | `OP only` | Number of replies minus the number of previewed replies | `0` or `Any positive integer` |
-| `omitted_images`| `integer`      | `OP only` | Number of image replies minus the number of previewed image replies | `0` or `Any positive integer` |
-| `replies`       | `integer`      | `OP only` | Total number of replies to a thread | `0` or `Any positive integer` |
-| `images`        | `integer`      | `OP only` | Total number of image replies to a thread | `0` or `Any positive integer` |
+| `omitted_posts` | `integer`      | `OP only` | Number of replies minus the number of previewed replies | `0` or `any positive integer` |
+| `omitted_images`| `integer`      | `OP only` | Number of image replies minus the number of previewed image replies | `0` or `any positive integer` |
+| `replies`       | `integer`      | `OP only` | Total number of replies to a thread | `0` or `any positive integer` |
+| `images`        | `integer`      | `OP only` | Total number of image replies to a thread | `0` or `any positive integer` |
 | `bumplimit`     | `integer`      | `OP only, only if bump limit has been reached` | If a thread has reached bumplimit, it will no longer bump | `1` or not set |
 | `imagelimit`    | `integer`      | `OP only, only if image limit has been reached` | If an image has reached image limit, no more image replies can be made  | `1` or not set |
 | `tag`           | `string`       | `OP only`, `/f/ only` | The category of `.swf` upload |`Game`, `Loop`, etc..|
 | `semantic_url`  | `string`       |  `OP only` | SEO URL slug for thread | `string` |
 | `since4pass`    | `integer`      | `if poster put 'since4pass' in the options field` | Year 4chan pass bought | `any 4 digit year`|
-| `unique_ips`    | `integer`      | `OP only` | Number of unique posters in a thread | `any positive integer` | 
+| `unique_ips`    | `integer`      | `OP only, only if thread has NOT been archived` | Number of unique posters in a thread | `any positive integer` | 
 | `m_img`         | `integer`      | `any post that has a mobile-optimized image` | Mobile optimized image exists for post | `1` or not set |
 | `archived`      | `integer`      | `OP only, if thread has been archived` | Thread has reached the board's archive | `1` or not set |
 | `archived_on`   | `integer`      | `OP only, if thread has been archived` | UNIX timestamp the post was archived | `UNIX timestamp` |
