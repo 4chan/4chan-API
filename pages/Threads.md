@@ -35,8 +35,6 @@
 | `filedeleted`   | `integer`      | `if post had attachment and attachment is deleted` | If the file was deleted from the post | `1` or not set |
 | `spoiler`       | `integer`      | `if post has attachment and attachment is spoilered` | If the image was spoilered or not | `1` or not set |
 | `custom_spoiler`| `integer`      | `if post has attachment and attachment is spoilered` | The custom spoiler ID for a spoilered image | `1-10` or not set |
-| `omitted_posts` | `integer`      | `OP only` | Number of replies minus the number of previewed replies | `0` or `any positive integer` |
-| `omitted_images`| `integer`      | `OP only` | Number of image replies minus the number of previewed image replies | `0` or `any positive integer` |
 | `replies`       | `integer`      | `OP only` | Total number of replies to a thread | `0` or `any positive integer` |
 | `images`        | `integer`      | `OP only` | Total number of image replies to a thread | `0` or `any positive integer` |
 | `bumplimit`     | `integer`      | `OP only, only if bump limit has been reached` | If a thread has reached bumplimit, it will no longer bump | `1` or not set |
