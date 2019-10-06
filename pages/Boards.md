@@ -37,7 +37,7 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 | `webm_audio`    | `integer`      | `only if enabled` | Are webms with audio allowed? | `1` or `0`|
 | `require_subject`    | `integer` | `only if enabled` | Do OPs require a subject | `1` or `0` |
 | `min_image_width`    | `integer` | `only if enabled` | What is the minimum image width (in pixels) | `Any positive integer`|
-| `min_image_height`   | `integer` | `only if enabled` | What is the minimum image heigh (in pixels) | `Any positive integer`|
+| `min_image_height`   | `integer` | `only if enabled` | What is the minimum image height (in pixels) | `Any positive integer`|
 
 * integer 1 = (on) or 0 (off)
 
