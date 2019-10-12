@@ -1,9 +1,9 @@
 ## catalog.json ##
-| **Example url** | [`https://a.4cdn.org/boards.json`](https://a.4cdn.org/boards.json) | 
+| **Example url** | [`https://boards.4channel.org/po/catalog`](https://boards.4channel.org/po/catalog) | 
 |:----------------|:-------------------------------------|
 | **Status 200**  | Content-Type: application/json |
 
-The `catalog.json` file is a comprehensive list of all threads+attributes on a board. Every thread is grouped by `page`. This file is a JSON representation of a board catalog page (example: [https://boards.4channel.org/po/catalog](https://boards.4channel.org/po/catalog).
+The `catalog.json` file is a comprehensive list of all threads+attributes on a board. Every thread is grouped by `page`. This file is a JSON representation of a board catalog page (example: [https://boards.4channel.org/po/catalog](https://boards.4channel.org/po/catalog)).
 
 
 ## Catalog JSON Attributes ##
