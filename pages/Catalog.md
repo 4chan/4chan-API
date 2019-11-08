@@ -1,5 +1,5 @@
 ## catalog.json ##
-| **Example url** | [`https://a.4cdn.org/boards.json`](https://a.4cdn.org/boards.json) | 
+| **Example url** | [`https://boards.4channel.org/po/catalog.json`](https://boards.4channel.org/po/catalog.json) | 
 |:----------------|:-------------------------------------|
 | **Status 200**  | Content-Type: application/json |
 
