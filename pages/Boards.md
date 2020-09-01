@@ -31,7 +31,8 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 | `user_ids`      | `integer`      | `only if enabled` | Are poster ID tags enabled on the board | `1` or `0`|
 | `oekaki`        | `integer`      | `only if enabled` | Can users submit drawings via browser the Oekaki app | `1` or `0` |
 | `sjis_tags`     | `integer`      | `only if enabled` | Can users submit [sjis](https://en.wikipedia.org/wiki/Shift_JIS) drawings using the `[sjis]` tags  | `1` or `0` |
-| `code_tags`     | `integer`      | `only if enabled` | Can poster use code syntax highlighting using the `[code]` tags  | `1` or `0` |
+| `code_tags`     | `integer`      | `only if enabled` | Board supports code syntax highlighting using the `[code]` tags  | `1` or `0` |
+| `math_tags`     | `integer`      | `only if enabled` | Board supports `[math]` [TeX](https://en.wikipedia.org/wiki/TeX) and `[eqn]` tags | `1` or `0` |
 | `text_only`     | `integer`      | `only if enabled` | Is image posting disabled for the board | `1` or `0`|
 | `forced_anon`   | `integer`      | `only if enabled` | Is the name field disabled on the board | `1` or `0`|
 | `webm_audio`    | `integer`      | `only if enabled` | Are webms with audio allowed? | `1` or `0`|
