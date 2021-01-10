@@ -11,7 +11,7 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 | **Attribute**   | **Type**       | **Appears**                | **Description** | **Possible values**|
 |:----------------|:---------------|:---------------------------|:----------------|:-------------------|
 | `board`         | `string`       | `always` | The directory the board is located in. | `Any string`
-| `title`         | `integer`      | `always` | The readable title at the top of the board. | `Any string`|
+| `title`         | `string`      | `always` | The readable title at the top of the board. | `Any string`|
 | `ws_board`      | `integer`      | `always` | Is the board [worksafe](https://4chan.org/faq#worksafe) | `1` or `0` |
 | `per_page`      | `integer`      | `always` | How many threads are on a single index page | `Any positive integer` |
 | `pages`         | `integer`      | `always` | How many index pages does the board have | `Any positive integer` |
