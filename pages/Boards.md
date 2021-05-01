@@ -3,7 +3,7 @@
 |:----------------|:-------------------------------------|
 | **Status 200**  | Content-Type: application/json |
 
-The `boards.json` file is a comprehensive list of all boards and their major settings. The `boards.json` file also contains a list of all meme flags available on boards where `troll_flags` is enabled.
+The `boards.json` file is a comprehensive list of all boards and their major settings.
 
 
 ## Boards.json Attributes ##
@@ -26,7 +26,7 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 | `spoilers`      | `integer`      | `only if enabled` | Are [spoilers](https://4chan.org/faq#spoiler) enabled | `1` or `0` |
 | `custom_spoilers`    | `integer` | `only if enabled` | How many custom spoilers does the board have | `Any positive integer` |
 | `is_archived`   | `integer`      | `only if enabled` | Are [archives](https://4chan.org/faq#archive) enabled for the board | `1` or `0` |
-| `troll_flags`   | `integer`      | `only if enabled` | Are troll flags enabled on the board | `1` or `0`|
+| `board_flags`   | `array`      | `only if enabled` | Array of flag codes mapped to flag names | |
 | `country_flags` | `integer`      | `only if enabled` | Are flags showing the poster's country enabled on the board | `1` or `0`|
 | `user_ids`      | `integer`      | `only if enabled` | Are poster ID tags enabled on the board | `1` or `0`|
 | `oekaki`        | `integer`      | `only if enabled` | Can users submit drawings via browser the Oekaki app | `1` or `0` |
@@ -85,12 +85,12 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 			"images": 15
 		},
 		"meta_description": "\u0026quot;\/b\/ - Random\u0026quot; is the birthplace of Anonymous, and where people go to discuss random topics and create memes on 4chan.",
-		"forced_anon": 1
+		"forced_anon": 1,
+		"board_flags": {
+			"AB": "Flag Name AB",
+			"XY": "Flag Name XY"
+		}
 	}],
-	"troll_flags": {
-		"AC": "Anarcho-Capitalist",
-		"AN": "Anarchist"
-	}
 }
 
 ```

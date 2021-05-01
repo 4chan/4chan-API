@@ -5,19 +5,20 @@
 
 **User images**: `https://i.4cdn.org/[board]/[4chan image ID].[file extension]`  
 
-**Thumbnails**: `https://i.4cdn.org/[board]/[4chan image ID]s.jpg`
+**Thumbnails**: `https://i.4cdn.org/[board]/[4chan image ID]s.jpg`  
 The `s` after the image ID indicates the file is a thumbnail.
 
-**Country flags**: `https://s.4cdn.org/image/country/[country code].gif` 
+**Country flags**: `https://s.4cdn.org/image/country/[country code].gif`
 
-**/pol/ special flags**: `https://s.4cdn.org/image/country/troll/[country code].gif`
+**Board flags sprite sheet**: `https://s.4cdn.org/image/flags/[board]/flags.css`
 
 **Spoiler image**: `https://s.4cdn.org/image/spoiler.png`
 
 **Custom spoilers**: `https://s.4cdn.org/image/spoiler-[board][1-5].png`
 
-**Note about custom spoilers:** 
+**Note about custom spoilers:**  
 Different boards can have different numbers of potential custom spoilers. For boards with custom spoilers enabled, a custom spoiler thumbnail is randomly assigned to each spoilered image on a page every time a new post is made and the page is refreshed.
+
 
 ### Special icons ###
 | **Icon** | **Description** | **Location**|
