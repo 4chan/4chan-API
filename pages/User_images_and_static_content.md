@@ -8,9 +8,13 @@
 **Thumbnails**: `https://i.4cdn.org/[board]/[4chan image ID]s.jpg`  
 The `s` after the image ID indicates the file is a thumbnail.
 
-**Country flags**: `https://s.4cdn.org/image/country/[country code].gif`
+**Country flags**:  
+Sprite sheet: `https://s.4cdn.org/css/flags.css`  
+Individual images: `https://s.4cdn.org/image/country/[country code].gif`
 
-**Board flags sprite sheet**: `https://s.4cdn.org/image/flags/[board]/flags.css`
+**Board flags**:  
+Sprite sheet: `https://s.4cdn.org/image/flags/[board]/flags.css`  
+Individual images: `https://s.4cdn.org/image/flags/[board]/[code].gif`
 
 **Spoiler image**: `https://s.4cdn.org/image/spoiler.png`
 
