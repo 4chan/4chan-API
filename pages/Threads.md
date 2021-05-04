@@ -21,7 +21,7 @@
 | `capcode`       | `string`       | `if post has capcode` | The capcode identifier for a post | Not set, `mod`, `admin`, `admin_highlight`, `manager`, `developer`, `founder` |
 | `country`       | `string`       | `if country flags are enabled` | Poster's [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) | `2 character string` or `XX` if unknown |
 | `country_name`  | `string`       | `if country flags are enabled`| Poster's country name | `Name of any country` |
-| `board_flag`    | `string`       | `if board flags are enabled`| Poster's board flag code | `2 character string` |
+| `board_flag`    | `string`       | `if board flags are enabled`| Poster's board flag code | |
 | `flag_name`     | `string`       | `if board flags are enabled`| Poster's board flag name | `Name of a board flag` |
 | `sub`           | `string`       | `OP only, if subject was included`| OP Subject text | `any string` |
 | `com`           | `string`       | `if comment was included` | Comment (HTML escaped) | `any HTML escaped string` |
