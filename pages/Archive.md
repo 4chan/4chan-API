@@ -1,5 +1,5 @@
 ## Archive.json ##
-| **Example url** | [`https://a.4cdn.org/po/archive.json`](https://a.4cdn.org/archive.json) | 
+| **Example url** | [`https://a.4cdn.org/po/archive.json`](https://a.4cdn.org/po/archive.json) | 
 |:----------------|:-------------------------------------|
 | **Status 200**  | Content-Type: application/json |
 
