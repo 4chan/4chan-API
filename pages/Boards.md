@@ -22,7 +22,7 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 | `bump_limit`    | `integer`      | `always` | Maximum number of replies allowed to a thread before the thread stops [bumping](https://4chan.org/faq#bump) | `Any positive integer`|
 | `image_limit`   | `integer`      | `always` | Maximum number of image replies per thread before image replies are discarded | `Any positive integer` |
 | `cooldowns`     | `array`        | `always` |  | |
-| `meta_description`   | `integer` | `always` | SEO [meta description content](https://moz.com/learn/seo/meta-description) for a board | `Any string`|
+| `meta_description`   | `string` | `always` | SEO [meta description content](https://moz.com/learn/seo/meta-description) for a board | `Any string`|
 | `spoilers`      | `integer`      | `only if enabled` | Are [spoilers](https://4chan.org/faq#spoiler) enabled | `1` or `0` |
 | `custom_spoilers`    | `integer` | `only if enabled` | How many custom spoilers does the board have | `Any positive integer` |
 | `is_archived`   | `integer`      | `only if enabled` | Are [archives](https://4chan.org/faq#archive) enabled for the board | `1` or `0` |
