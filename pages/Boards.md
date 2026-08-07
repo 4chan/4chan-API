@@ -29,7 +29,7 @@ The `boards.json` file is a comprehensive list of all boards and their major set
 | `board_flags`   | `array`      | `only if enabled` | Array of flag codes mapped to flag names | |
 | `country_flags` | `integer`      | `only if enabled` | Are flags showing the poster's country enabled on the board | `1` or `0`|
 | `user_ids`      | `integer`      | `only if enabled` | Are poster ID tags enabled on the board | `1` or `0`|
-| `oekaki`        | `integer`      | `only if enabled` | Can users submit drawings via browser the Oekaki app | `1` or `0` |
+| `oekaki`        | `integer`      | `only if enabled` | Can users submit drawings via the browser Oekaki app | `1` or `0` |
 | `sjis_tags`     | `integer`      | `only if enabled` | Can users submit [sjis](https://en.wikipedia.org/wiki/Shift_JIS) drawings using the `[sjis]` tags  | `1` or `0` |
 | `code_tags`     | `integer`      | `only if enabled` | Board supports code syntax highlighting using the `[code]` tags  | `1` or `0` |
 | `math_tags`     | `integer`      | `only if enabled` | Board supports `[math]` [TeX](https://en.wikipedia.org/wiki/TeX) and `[eqn]` tags | `1` or `0` |

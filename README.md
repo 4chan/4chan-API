@@ -18,7 +18,7 @@ Data from the 4chan API is exclusively accessible from `a.4cdn.org`, via either 
 | [Archive.json](pages/Archive.md) | Documentation for the 4chan native archive and its JSON|
 | [Boards.json](pages/Boards.md) | Documentation for the 4chan board list and its attributes. |
 | [Catalog.json](pages/Catalog.md) | Documentation for the JSON representation of the 4chan native catalog |
-| [Index endpoint](pages/Indexes.md) | Documentation for the JSON representaion of board index (main) pages |
+| [Index endpoint](pages/Indexes.md) | Documentation for the JSON representation of board index (main) pages |
 | [Thread endpoint](pages/Threads.md) | Documentation for the JSON representation of specific 4chan threads. |
 | [Thread list](pages/Threadlist.md) | Documentation for the board threadlist and its brief stats|
 
